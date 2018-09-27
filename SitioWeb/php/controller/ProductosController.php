@@ -11,27 +11,27 @@ class ProductosController
 
   function __construct()
   {
-    $this->$view = new ProductosView();
-    $this->$model = new ProductosModel();
-    $this->$Titulo = "Lista de Productos";
+    $this->view = new ProductosView();
+    $this->model = new ProductosModel();
+    $this->Titulo = "Lista de Productos";
   }
 
   function Home(){
-    $this->$view->MostrarHome();
+    $this->view->MostrarHome();
   }
 
   function Historia(){
-    $this->$view->MostrarHistoria();
+    $this->view->MostrarHistoria();
   }
 
   function Mundo(){
-    $this->$view->MostrarMateWorld();
+    $this->view->MostrarMateWorld();
   }
 
   function Productos(){
 
-    $Productos = $this->$model->getProductos();
-    $this->$view->MostrarProductos($Titulo,$Productos);
+    $Productos = $this->model->getProductos();
+    $this->view->MostrarProductos($Titulo,$Productos);
   }
 
   function InsertProducto(){
@@ -40,7 +40,7 @@ class ProductosController
     $categoria = $_POST["categoria"];
     $precio = $_POST["precio"];
 
-    $this->$model->InsertarProducto($nombre,$descripcion,$categoria,$precio);
+    $this->model->InsertarProducto($nombre,$descripcion,$categoria,$precio);
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
   }
 

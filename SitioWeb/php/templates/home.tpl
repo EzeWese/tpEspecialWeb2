@@ -17,7 +17,7 @@
               como recipiente para tomar mate, previamente debe ser curado.</p>
           </div>
           <div class="imageninformaciongeneral col-12 col-md-6">
-            <img src="imagenes/fruto.jpg" alt="" class="img-thumbnail">
+            <img src="../imagenes/fruto.jpg" alt="" class="img-thumbnail">
           </div>
         </div>
         <div class="informaciongeneral  row mt-5">
@@ -28,7 +28,7 @@
               Brasil y Paraguay (en orden de producción total) desde el siglo XIX, dando lugar a una importante industria.</p>
           </div>
           <div class="imageninformaciongeneral col-12 col-md-6 ">
-            <img src="imagenes/yerbamate.jpg" alt="" class="img-thumbnail">
+            <img src="../imagenes/yerbamate.jpg" alt="" class="img-thumbnail">
           </div>
         </div>
         <div class="informaciongeneral row mt-5">
@@ -50,13 +50,13 @@
           </div>
           <div class="row galeriabuenmate col-12 mt-3">
             <div class="imagenbuenmate col-4">
-              <img src="imagenes/paso1.jpg" alt="" class="img-thumbnail">
+              <img src="../imagenes/paso1.jpg" alt="" class="img-thumbnail">
             </div>
             <div class="imagenbuenmate col-4">
-              <img src="imagenes/paso2.jpg" alt="" class="img-thumbnail">
+              <img src="../imagenes/paso2.jpg" alt="" class="img-thumbnail">
             </div>
             <div class="imagenbuenmate col-4">
-              <img src="imagenes/paso2.jpg" alt="" class="img-thumbnail">
+              <img src="../imagenes/paso2.jpg" alt="" class="img-thumbnail">
             </div>
           </div>
         </div>

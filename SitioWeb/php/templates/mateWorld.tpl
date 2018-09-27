@@ -50,7 +50,7 @@
             </table>
           </div>
           <div class="col-10">
-            <img class="mapaexportaciones" src="imagenes/exportaciones.jpg" alt="">
+            <img class="mapaexportaciones" src="../imagenes/exportaciones.jpg" alt="">
           </div>
         </div>
         <div class="row justify-content-center mt-4">
@@ -61,13 +61,13 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active imgporelmundo">
-                  <img class="d-block w-100" src="imagenes/alemania.jpg" alt="First slide">
+                  <img class="d-block w-100" src="../imagenes/alemania.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item imgporelmundo">
-                  <img class="d-block w-100" src="imagenes/paris.jpg" alt="Second slide">
+                  <img class="d-block w-100" src="../imagenes/paris.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item imgporelmundo">
-                  <img class="d-block w-100" src="imagenes/antartida.jpg" alt="Third  slide">
+                  <img class="d-block w-100" src="../imagenes/antartida.jpg" alt="Third  slide">
                 </div>
               </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

@@ -1,23 +1,20 @@
 <?php
 
-  /**
-   *
-   */
   class ProductosModel
   {
     private $db;
 
     function __construct()
     {
-      $this->$db = Connect();
+      $this->db = $this->Connect();
     }
-
 
     private function Connect(){
 
       return new PDO('mysql:host=localhost;'
-      .'dbname=db_productos;charset=utf8'
-      , 'root', '');
+    .'dbname=db_productos;charset=utf8'
+    , 'root', '');
+
     }
 
     function getProductos(){

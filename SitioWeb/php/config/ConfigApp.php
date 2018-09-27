@@ -11,7 +11,7 @@
       'historia'=> 'ProductosController#Historia',
       'mundo'=> 'ProductosController#Mundo',
       'productos'=> 'ProductosController#Productos',
-      'borrar'=> 'TareasController#BorrarTarea'
+      'borrar'=> 'ProductosController#BorrarProducto'
     ];
 
 

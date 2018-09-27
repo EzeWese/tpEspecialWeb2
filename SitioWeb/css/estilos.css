@@ -43,7 +43,7 @@ div.row{
 .mapaexportaciones{
     width:100%;
     height: 100%;
-    border: solid #020702 1px; 
+    border: solid #020702 1px;
 }
 .imgporelmundo>img{
     width: 100%;
@@ -55,6 +55,7 @@ li {
 li>.btn{
     flex-grow: 1;
     width: 100%;
+    color: antiquewhite;
 }
 footer p{
     text-align: center;
