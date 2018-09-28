@@ -31,7 +31,7 @@ class ProductosController
   function Productos(){
 
     $Productos = $this->model->getProductos();
-    $this->view->MostrarProductos($Titulo,$Productos);
+    $this->view->MostrarProductos($this->Titulo,$Productos);
   }
 
   function InsertProducto(){
