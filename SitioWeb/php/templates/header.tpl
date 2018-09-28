@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/estilos.css">
   <link rel="icon" href="../imagenes/mate.png">
-  <base href="http://localhost/Proyects/Web2/tpEspecialWeb2/SitioWeb/php/" target="_blank">
+  <base href="{$smarty.server.SERVER_NAME}" target="_blank">
 </head>
 
 <body>
@@ -26,16 +26,16 @@
             <button class="btn btn-lg"><img src="../imagenes/mate.png" width="32" height="32" class="d-inline-block align-top " alt=""></button>
           </li>
           <li class="nav-item active">
-            <a class="js_btn btn btn-lg" href="home">Home</a>
+            <a class="js_btn btn btn-lg" href="home" target="_self" >Home</a>
           </li>
           <li class="nav-item">
-            <a class="js_btn btn btn-lg" href="historia">Historia</a>
+            <a class="js_btn btn btn-lg" href="historia" target="_self">Historia</a>
           </li>
           <li class="nav-item">
-            <a class="js_btn btn btn-lg" href="mundo">Por el Mundo</a>
+            <a class="js_btn btn btn-lg" href="mundo" target="_self">Por el Mundo</a>
           </li>
           <li class="nav-item">
-            <a class="js_btn btn btn-lg" href="productos">Productos</a>
+            <a class="js_btn btn btn-lg" href="productos" target="_self">Productos</a>
           </li>
         </ul>
       </div>
