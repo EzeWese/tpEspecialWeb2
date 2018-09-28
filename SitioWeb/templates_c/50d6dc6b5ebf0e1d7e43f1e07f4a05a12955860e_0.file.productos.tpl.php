@@ -1,4 +1,30 @@
-{include file="php/templates/header.tpl"}
+<?php
+/* Smarty version 3.1.33, created on 2018-09-28 21:40:56
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bae83c84db823_68635585',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '50d6dc6b5ebf0e1d7e43f1e07f4a05a12955860e' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
+      1 => 1538163171,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:php/templates/header.tpl' => 1,
+    'file:php/templates/footer.tpl' => 1,
+  ),
+),false)) {
+function content_5bae83c84db823_68635585 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <div class="row justify-content-center">
     <article class="principal col-12 col-md-10">
       <div class="justify-content-center mt-3">
@@ -60,17 +86,29 @@
           <tbody class="tabla-opiniones">
 
 
-              {foreach from=$Productos item=producto}
+              <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Productos']->value, 'producto');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
+?>
 
                 <tr class="btn-centrado">
-                  <td>{$producto['nombre']}</td>
-                  <td>{$producto['descripcion']}</td>
-                  <td>{$producto['categoria']}</td>
-                  <td>{$producto['precio']}</td>
-                  <td><a href="borrar/{$producto['id_producto']}">BORRAR</a></td>
+                  <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
+</td>
+                  <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['descripcion'];?>
+</td>
+                  <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['categoria'];?>
+</td>
+                  <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
+</td>
+                  <td><a href="borrar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+">BORRAR</a></td>
                 </tr>
 
-              {/foreach}
+              <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
           </tbody>
@@ -79,4 +117,6 @@
       </div>
     </article>
   </div>
-{include file="php/templates/footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:php/templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

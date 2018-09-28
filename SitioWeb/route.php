@@ -1,7 +1,7 @@
 <?php
 
-require_once "config/ConfigApp.php";
-require_once "controller/ProductosController.php";
+require_once "php/config/ConfigApp.php";
+require_once "php/controller/ProductosController.php";
 
 #[borrar][1]
 #completada/2

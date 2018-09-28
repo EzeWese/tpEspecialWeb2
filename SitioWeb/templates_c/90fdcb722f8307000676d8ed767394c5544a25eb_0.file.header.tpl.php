@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2018-09-28 21:38:42
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bae83425fc0e3_60346899',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '90fdcb722f8307000676d8ed767394c5544a25eb' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\header.tpl',
+      1 => 1538163518,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5bae83425fc0e3_60346899 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -9,7 +32,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="icon" href="imagenes/mate.png">
-  <base href="{$smarty.server.SERVER_NAME}" target="_blank">
+  <base href="<?php echo $_SERVER['SERVER_NAME'];?>
+" target="_blank">
 </head>
 
 <body>
@@ -42,3 +66,5 @@
     </nav>
   </header>
 <div class="cuerpo">
+<?php }
+}

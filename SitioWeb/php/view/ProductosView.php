@@ -1,5 +1,5 @@
 <?php
-require('libs/Smarty.class.php');
+require('php/libs/Smarty.class.php');
 
   class ProductosView
     {
@@ -11,17 +11,17 @@ require('libs/Smarty.class.php');
 
     function MostrarHome(){
 
-      $this->Smarty->display('templates/home.tpl');
+      $this->Smarty->display('php/templates/home.tpl');
     }
 
     function MostrarHistoria(){
 
-      $this->Smarty->display('templates/historia.tpl');
+      $this->Smarty->display('php/templates/historia.tpl');
     }
 
     function MostrarMateWorld(){
 
-      $this->Smarty->display('templates/mateWorld.tpl');
+      $this->Smarty->display('php/templates/mateWorld.tpl');
     }
 
     function MostrarProductos($Titulo, $Productos) {
@@ -29,7 +29,7 @@ require('libs/Smarty.class.php');
       $this->Smarty->assign('Titulo',$Titulo); // El 'Titulo' del assign puede ser cualquier valor
       $this->Smarty->assign('Productos',$Productos);
       //$smarty->debugging = true;
-      $this->Smarty->display('templates/productos.tpl');
+      $this->Smarty->display('php/templates/productos.tpl');
     }
   }
 
