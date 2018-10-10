@@ -23,10 +23,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <button class="btn btn-lg"><img src="imagenes/mate.png" width="32" height="32" class="d-inline-block align-top " alt=""></button>
+            <a class="btn btn-lg" href="home" target="_self"><img src="imagenes/mate.png" width="32" height="32" class="d-inline-block align-top " alt=""></a>
           </li>
           <li class="nav-item active">
-            <a class="js_btn btn btn-lg" href="home" target="_self" >Home</a>
+            <a class="js_btn btn btn-lg" href="home" target="_self">Home</a>
           </li>
           <li class="nav-item">
             <a class="js_btn btn btn-lg" href="historia" target="_self">Historia</a>

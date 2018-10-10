@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-09-28 21:38:42
+/* Smarty version 3.1.33, created on 2018-09-30 01:21:22
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bae83425fc0e3_60346899',
+  'unifunc' => 'content_5bb008f20952d7_85137145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '90fdcb722f8307000676d8ed767394c5544a25eb' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\header.tpl',
-      1 => 1538163518,
+      1 => 1538196673,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bae83425fc0e3_60346899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb008f20952d7_85137145 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -47,10 +47,10 @@ function content_5bae83425fc0e3_60346899 (Smarty_Internal_Template $_smarty_tpl)
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <button class="btn btn-lg"><img src="imagenes/mate.png" width="32" height="32" class="d-inline-block align-top " alt=""></button>
+            <a class="btn btn-lg" href="home" target="_self"><img src="imagenes/mate.png" width="32" height="32" class="d-inline-block align-top " alt=""></a>
           </li>
           <li class="nav-item active">
-            <a class="js_btn btn btn-lg" href="home" target="_self" >Home</a>
+            <a class="js_btn btn btn-lg" href="home" target="_self">Home</a>
           </li>
           <li class="nav-item">
             <a class="js_btn btn btn-lg" href="historia" target="_self">Historia</a>

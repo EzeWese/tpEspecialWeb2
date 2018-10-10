@@ -2,56 +2,76 @@
 
 require_once  "php/view/ProductosView.php";
 require_once  "php/model/ProductosModel.php";
+require_once  "SecuredController.php";
 
-class ProductosController
+class ProductosController extends SecuredController
 {
   private $view;
   private $model;
-  private $Titulo;
 
   function __construct()
   {
+    parent::__construct();
+
     $this->view = new ProductosView();
     $this->model = new ProductosModel();
-    $this->Titulo = "Lista de Productos";
   }
 
-  function Home(){
-    $this->view->MostrarHome();
-  }
-
-  function Historia(){
-    $this->view->MostrarHistoria();
-  }
-
-  function Mundo(){
-    $this->view->MostrarMateWorld();
-  }
-
-  function Productos(){
+  function ProductosAdmin($message = ''){
 
     $Productos = $this->model->getProductos();
-    $this->view->MostrarProductos($this->Titulo,$Productos);
+    $Categorias = $this->model->getCategorias();
+    $this->view->MostrarProductosAdmin($Productos,$Categorias,$message);
   }
 
   function InsertProducto(){
-    $nombre = $_POST["nombreProducto"];
-    $descripcion = $_POST["descripcion"];
-    $categoria = $_POST["categoria"];
-    $precio = $_POST["precio"];
-
-    $this->model->InsertarProducto($nombre,$descripcion,$categoria,$precio);
-    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+      $nombre = $_POST["nombreProducto"];
+      $descripcion = $_POST["descripcion"];
+      $IdCategoria = $_POST["IdCategoria"];
+      $precio = $_POST["precio"];
+      if(isset($nombre) && isset($descripcion) && isset($IdCategoria) && isset($precio)){
+        $this->model->InsertarProducto($IdCategoria,$nombre,$precio,$descripcion);
+        header(ADMIN);
+      }
+      else{
+      $this->ProductosAdmin("Completar todos los campos");
+      }
   }
 
   function BorrarProducto($param){
     $this->model->BorrarProducto($param[0]);
-    header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+    header(ADMIN);
+  }
+
+  function EditarProducto($param){
+    $IdProducto = $param[0];
+
+    $Categorias = $this->model->getCategorias();
+    $Producto = $this->model->getProducto($IdProducto);
+    $this->view->MostrarEditarProducto($Producto,$Categorias);
+
+  }
+
+  function GuardarEditarProducto(){
+    $nombre = $_POST["nombreProducto"];
+    $descripcion = $_POST["descripcion"];
+    $IdCategoria = $_POST["IdCategoria"];
+    $precio = $_POST["precio"];
+    $IdProducto = $_POST["IdProducto"];
+
+    if(!empty($nombre) && !empty($descripcion) && !empty($IdCategoria) && !empty($precio)){
+      $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto);
+      header(ADMIN);
+    }
+    else{
+      $Producto = $this->model->getProducto($IdProducto);
+      $Categorias = $this->model->getCategorias();
+      $this->view->MostrarEditarProducto($Producto,$Categorias, "Complete todos los campos");
+    }
   }
 
 
-
-  }
+}
 
 
 

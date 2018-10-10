@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-09-28 21:38:50
+/* Smarty version 3.1.33, created on 2018-09-30 01:21:30
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\historia.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bae834a835d96_98312829',
+  'unifunc' => 'content_5bb008fa6c3598_75580804',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bae834a835d96_98312829 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb008fa6c3598_75580804 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <div class="row justify-content-center">

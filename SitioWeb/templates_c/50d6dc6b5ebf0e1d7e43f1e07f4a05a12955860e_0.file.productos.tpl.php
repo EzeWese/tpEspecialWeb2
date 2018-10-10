@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-09-28 21:40:56
+/* Smarty version 3.1.33, created on 2018-10-03 05:58:09
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bae83c84db823_68635585',
+  'unifunc' => 'content_5bb43e51d7ec66_37912190',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '50d6dc6b5ebf0e1d7e43f1e07f4a05a12955860e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1538163171,
+      1 => 1538539049,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bae83c84db823_68635585 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb43e51d7ec66_37912190 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -31,33 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
         <h1 class="text-center">Nuestros Productos</h1>
         <h2 class="text-center subtitulo mt-4">"Cada quien con lo suyo..."</h2>
       </div>
-      <div class="informaciongeneral mt-5">
-        <h2>(Solos usuarios con contraseña cargan Productos)</h2>
-      </div>
-      <div class="informaciongeneral encuesta">
-        <form method="post" action="agregar">
-          <div class="form-group">
-            <label for="nombre">Nombre de Producto</label>
-            <input type="text" class="form-control respuestas" id="nombre" value="" placeholder="" name="nombreProducto">
-          </div>
-          <div class="form-group">
-            <label for="descripcionP">Descripcion</label>
-            <textarea class="form-control respuestas" id="descripcionP" placeholder="" name="descripcion"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="categoriaProducto">Categoria</label>
-            <input type="text" class="form-control respuestas" id="categoriaProducto" placeholder="" name="categoria">
-          </div>
-          <div class="form-group">
-            <label for="precioP">Precio</label>
-            <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio">
-          </div>
-          <div class="botonesForm">
-            <button type="submit" class="btn btn-lg btn-enviar">Cargar</button>
-          </div>
-        </form>
-        </div>
-        <div class="informaciongeneral row test mt-3 mb-3">
+      <div class="informaciongeneral row test mt-5 mb-3">
           <div class="col-6">
             <h2>Productos</h2>
           </div>
@@ -79,8 +53,6 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
               <th scope="col">Descripcion</th>
               <th scope="col">Categoria</th>
               <th scope="col">Precio</th>
-              <th>Borrar</th>
-              <th>Editar</th>
             </tr>
           </thead>
           <tbody class="tabla-opiniones">
@@ -101,8 +73,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
 </td>
                   <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
 </td>
-                  <td><a href="borrar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
-">BORRAR</a></td>
                 </tr>
 
               <?php
@@ -114,6 +84,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </tbody>
         </table>
         </div>
+      </div>
+      <div class="informaciongeneral mt-3">
+        <h2>Administrador</h2>
+      </div>
+      <div class="informaciongeneral encuesta row mb-3">
+          <form method="post" action="login" target="_self">
+            <div class="botonesForm ml-3">
+              <button type="submit" class="btn btn-lg btn-enviar">Login</button>
+            </div>
+          </form>
       </div>
     </article>
   </div>

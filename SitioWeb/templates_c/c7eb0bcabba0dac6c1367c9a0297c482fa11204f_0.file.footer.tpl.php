@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-09-28 21:40:00
+/* Smarty version 3.1.33, created on 2018-09-30 01:21:22
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bae839014bff7_28710642',
+  'unifunc' => 'content_5bb008f20e5078_05375080',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bae839014bff7_28710642 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bb008f20e5078_05375080 (Smarty_Internal_Template $_smarty_tpl) {
 ?></div>
 <footer class="container-fluid">
   <p>Página creada por Ezequiel Wesenack y Patricio Prado para el trabajo especial de la cátedra de web2 de la carrera de

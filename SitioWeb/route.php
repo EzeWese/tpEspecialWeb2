@@ -2,6 +2,9 @@
 
 require_once "php/config/ConfigApp.php";
 require_once "php/controller/ProductosController.php";
+require_once "php/controller/LoginController.php";
+require_once "php/controller/PageController.php";
+require_once "php/controller/SecuredController.php";
 
 #[borrar][1]
 #completada/2
@@ -35,7 +38,7 @@ function parseURL($url)
             echo $controller->$metodo();
         }
     }else{
-      $controller = new ProductosController();
+      $controller = new PageController();
       echo $controller->Home();
     }
 }
