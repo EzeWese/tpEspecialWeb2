@@ -31,7 +31,7 @@
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    private function getCategoria($IdCategoria){
+     function getCategoria($IdCategoria){
       $sentencia = $this->db->prepare("SELECT * FROM categoria WHERE id_categoria=? limit 1");
       $sentencia->execute(array($IdCategoria));
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -64,6 +64,12 @@
 
       $sentencia = $this->db->prepare("UPDATE producto SET id_categoria = ?, nombre = ?, categoria = ?, precio = ?, descripcion = ? WHERE id_producto=?");
       $sentencia->execute(array($IdCategoria,$nombre,$categoria,$precio,$descripcion,$IdProducto));
+
+    }
+
+    function EditarCategoria($IdCategoria,$nombre,$descripcion){
+      $sentencia = $this->db->prepare("UPDATE categoria SET nombre = ?, descripcion = ? WHERE id_categoria=?");
+      $sentencia->execute(array($nombre,$descripcion,$IdCategoria));
 
     }
 

@@ -101,6 +101,23 @@
         </table>
         </div>
       </div>
+      <div class="col-12">
+        <table class="table mb-3 mt-2">
+        <thead>
+          <tr>
+          <th scope="col">Producto</th>
+          <th scope="col"></th>
+        <tbody class="tabla-opiniones">
+        {foreach from=$Categorias item=categoria}
+        <tr class="btn-centrado">
+          <td>{$categoria['nombre']}</td>
+          <td><a href="editarCategoria/{$categoria['id_categoria']}" target="_self">EDITAR Categoria</a></td>
+        </tr>
+          {/foreach}
+          </tbody>
+            </table>
+
+                </div>
       <form method="post" action="register" target="_self">
         <div class="botonesForm mt-3">
           <button type="submit" class="btn btn-lg btn-enviar">Register</button>

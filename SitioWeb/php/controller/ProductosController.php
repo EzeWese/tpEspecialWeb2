@@ -51,6 +51,13 @@ class ProductosController extends SecuredController
 
 
   }
+  function EditarCategoria($param){
+    $IdCategoria = $param[0];
+    $Categoria = $this->model->getCategoria($IdCategoria);
+    $this->view->MostrarEditarCategoria($Categoria[0]);
+
+
+  }
 
   function GuardarEditarProducto(){
     $nombre = $_POST["nombreProducto"];
@@ -61,6 +68,13 @@ class ProductosController extends SecuredController
     $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto);
     header(ADMIN);
   }
+  function GuardarEditarCategoria(){
+    $nombre = $_POST["nombreCategoria"];
+    $descripcion = $_POST["descripcion"];
+    $IdCategoria = $_POST["IdCategoria"];
+    $this->model->EditarCategoria($IdCategoria,$nombre,$descripcion);
+    header(ADMIN);
+  }
 
   function InsertCategoria(){
     $nombreCategoria=$_POST["nuevaCategoria"];
@@ -68,7 +82,7 @@ class ProductosController extends SecuredController
     $this->model->CrearCategoria($nombreCategoria,$descripcionCategoria);
     header(ADMIN);
   }
-  
+
 }
 
 

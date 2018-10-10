@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-10 23:13:38
+/* Smarty version 3.1.33, created on 2018-10-11 00:44:40
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bbe6b8249c639_26751003',
+  'unifunc' => 'content_5bbe80d86414b8_30576141',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '91686e546a3105fb4057bbeb60dd2933d562bfbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1539206013,
+      1 => 1539211203,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bbe6b8249c639_26751003 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bbe80d86414b8_30576141 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -150,6 +150,32 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </table>
         </div>
       </div>
+      <div class="col-12">
+        <table class="table mb-3 mt-2">
+        <thead>
+          <tr>
+          <th scope="col">Producto</th>
+          <th scope="col"></th>
+        <tbody class="tabla-opiniones">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
+?>
+        <tr class="btn-centrado">
+          <td><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
+</td>
+          <td><a href="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+" target="_self">EDITAR Categoria</a></td>
+        </tr>
+          <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+          </tbody>
+            </table>
+
+                </div>
       <form method="post" action="register" target="_self">
         <div class="botonesForm mt-3">
           <button type="submit" class="btn btn-lg btn-enviar">Register</button>

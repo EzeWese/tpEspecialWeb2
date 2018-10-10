@@ -25,8 +25,13 @@
       $this->Smarty->assign('home',"http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
       $this->Smarty->display('php/templates/editarProducto.tpl');
     }
+    function MostrarEditarCategoria($Categoria) {
+      $this->Smarty->assign('Categoria',$Categoria);
+      $this->Smarty->assign('home',"http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+      $this->Smarty->display('php/templates/editarCategoria.tpl');
+    }
 
-    
+
 
   }
 
