@@ -24,7 +24,9 @@ define('ADMIN', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["
       'verificarLogin'=> 'LoginController#verificarLogin',
       'admin'=> 'ProductosController#ProductosAdmin',
       'register'=> 'LoginController#register',
-      'verificarRegister'=> 'LoginController#verificarRegister'
+      'verificarRegister'=> 'LoginController#verificarRegister',
+      'nuevaCategoria'=> 'ProductosController#InsertCategoria',
+      'mostrarProducto'=> 'PageController#mostrarProducto'
     ];
 
 

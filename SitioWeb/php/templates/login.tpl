@@ -22,11 +22,7 @@
             <button type="submit" class="btn btn-lg btn-enviar">Login</button>
           </div>
         </form>
-        <form method="post" action="register" target="_self">
-          <div class="botonesForm mt-3">
-            <button type="submit" class="btn btn-lg btn-enviar">Register</button>
-          </div>
-        </form>
+        
       </div>
     </article>
   </div>

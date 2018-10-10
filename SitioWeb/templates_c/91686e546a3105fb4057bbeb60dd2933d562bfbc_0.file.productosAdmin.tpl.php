@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-10 20:56:38
+/* Smarty version 3.1.33, created on 2018-10-10 23:13:38
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bbe4b66143af8_26729268',
+  'unifunc' => 'content_5bbe6b8249c639_26751003',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '91686e546a3105fb4057bbeb60dd2933d562bfbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1539197294,
+      1 => 1539206013,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bbe4b66143af8_26729268 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bbe6b8249c639_26751003 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -71,6 +71,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
           <div class="botonesForm">
             <button type="submit" class="btn btn-lg btn-enviar">Cargar</button>
+          </div>
+        </form>
+        <form action="nuevaCategoria" method="post" target="_self">
+          <div class="form-group">
+            <label for="nuevaCategoria">Nombre</label>
+            <input id="nuevaCategoria"type="text" name="nuevaCategoria" value="" required>
+            <label for="descripcionNuevaCategoria">Descripcion</label>
+            <textarea class="form-control respuestas" id="descripcionNuevaCategoria" placeholder="" name="descripcionNuevaCategoria" required></textarea>
+            </div>
+          <div class="botonesForm mt-3">
+            <button type="submit" class="btn btn-lg btn-enviar">Nueva Categoria</button>
           </div>
         </form>
         <form action="post" method="logout" target="_self">
@@ -139,6 +150,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </table>
         </div>
       </div>
+      <form method="post" action="register" target="_self">
+        <div class="botonesForm mt-3">
+          <button type="submit" class="btn btn-lg btn-enviar">Register</button>
+        </div>
+      </form>
     </article>
   </div>
 <?php $_smarty_tpl->_subTemplateRender("file:php/templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

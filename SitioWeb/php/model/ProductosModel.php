@@ -67,6 +67,11 @@
 
     }
 
+    function CrearCategoria($nombreCategoria,$descripcionCategoria){
+      $sentencia = $this->db->prepare("INSERT INTO categoria(nombre,descripcion) VALUES(?,?)");
+      $sentencia->execute(array($nombreCategoria,$descripcionCategoria));
+    }
+
 
 //UPDATE `producto` SET `id_producto`=[value-1],`id_categoria`=[value-2],`nombre`=[value-3],`categoria`=[value-4],`precio`=[value-5],`descripcion`=[value-6] WHERE 1
 

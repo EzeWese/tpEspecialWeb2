@@ -37,6 +37,17 @@
             <button type="submit" class="btn btn-lg btn-enviar">Cargar</button>
           </div>
         </form>
+        <form action="nuevaCategoria" method="post" target="_self">
+          <div class="form-group">
+            <label for="nuevaCategoria">Nombre</label>
+            <input id="nuevaCategoria"type="text" name="nuevaCategoria" value="" required>
+            <label for="descripcionNuevaCategoria">Descripcion</label>
+            <textarea class="form-control respuestas" id="descripcionNuevaCategoria" placeholder="" name="descripcionNuevaCategoria" required></textarea>
+            </div>
+          <div class="botonesForm mt-3">
+            <button type="submit" class="btn btn-lg btn-enviar">Nueva Categoria</button>
+          </div>
+        </form>
         <form action="post" method="logout" target="_self">
           <div class="botonesForm mt-3">
             <button type="submit" class="btn btn-lg btn-enviar">Logout</button>
@@ -90,6 +101,11 @@
         </table>
         </div>
       </div>
+      <form method="post" action="register" target="_self">
+        <div class="botonesForm mt-3">
+          <button type="submit" class="btn btn-lg btn-enviar">Register</button>
+        </div>
+      </form>
     </article>
   </div>
 {include file="php/templates/footer.tpl"}

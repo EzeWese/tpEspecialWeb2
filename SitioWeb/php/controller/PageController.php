@@ -29,9 +29,14 @@ class PageController
   function Productos(){
 
     $Productos = $this->model->getProductos();
-    $this->view->MostrarProductos($Productos);
+    $Categorias = $this->model->getCategorias();
+    $this->view->MostrarProductos($Productos,$Categorias);
   }
-
+  function mostrarProducto($param){
+    $IdProducto = $param[0];
+    $Producto = $this->model->getProducto($IdProducto);
+    $this->view->MostrarProducto($Producto);
+  }
 }
 
  ?>

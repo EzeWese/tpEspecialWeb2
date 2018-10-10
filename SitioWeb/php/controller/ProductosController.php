@@ -58,17 +58,17 @@ class ProductosController extends SecuredController
     $IdCategoria = $_POST["IdCategoria"];
     $precio = $_POST["precio"];
     $IdProducto = $_POST["IdProducto"];
-
-
-      $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto);
-      header(ADMIN);
-
-
-      
-
+    $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto);
+    header(ADMIN);
   }
 
-
+  function InsertCategoria(){
+    $nombreCategoria=$_POST["nuevaCategoria"];
+    $descripcionCategoria=$_POST["descripcionNuevaCategoria"];
+    $this->model->CrearCategoria($nombreCategoria,$descripcionCategoria);
+    header(ADMIN);
+  }
+  
 }
 
 

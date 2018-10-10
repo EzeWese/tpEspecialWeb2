@@ -26,7 +26,7 @@
       $this->Smarty->display('php/templates/editarProducto.tpl');
     }
 
-
+    
 
   }
 

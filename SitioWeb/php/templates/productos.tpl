@@ -5,22 +5,28 @@
         <h1 class="text-center">Nuestros Productos</h1>
         <h2 class="text-center subtitulo mt-4">"Cada quien con lo suyo..."</h2>
       </div>
-      <div class="informaciongeneral row test mt-5 mb-3">
+      <div class="informaciongeneral  test mt-5 mb-3">
           <div class="col-6">
             <h2>Productos</h2>
           </div>
-          <div class="col-6 filtro">
-            <div class="row">
-              <form class="">
-                <label>Filtrar por Categoria</label>
-                <input class="filtrar" type="text">
-              </form>
-              <button class="btn-filtrar">Filtrar</button>
-              <button class="btn-limpiar">Limpiar Filtros</button>
-            </div>
+<div class="col-12">
+          <ul class="list-group">
+            {foreach from=$Productos item=producto}
+
+            <li class="list-group-item"><a href="mostrarProducto/{$producto['id_producto']} "target="_self">{$producto['nombre']}</a></li>
+            {/foreach}
+          </ul>
           </div>
-          <div class="table-responsive">
-          <table class="table mb-3 mt-2">
+          <h2>Categorias</h2>
+          <div class="col-12">
+                    <ul class="list-group">
+                      {foreach from=$Categorias item=categoria}
+                      <li class="list-group-item">{$categoria['nombre']}</li>
+                      {/foreach}
+                    </ul>
+                    </div>
+          <!--  <div class="table-responsive">
+        <table class="table mb-3 mt-2">
             <thead>
               <tr>
               <th scope="col">Producto</th>
@@ -34,7 +40,7 @@
 
               {foreach from=$Productos item=producto}
 
-                <tr class="btn-centrado">
+                <ul class="btn-centrado">
                   <td>{$producto['nombre']}</td>
                   <td>{$producto['descripcion']}</td>
                   <td>{$producto['categoria']}</td>
@@ -46,7 +52,7 @@
 
           </tbody>
         </table>
-        </div>
+        </div>-->
       </div>
       <div class="informaciongeneral mt-3">
         <h2>Administrador</h2>
