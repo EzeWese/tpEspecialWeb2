@@ -45,10 +45,10 @@ class ProductosController extends SecuredController
 
   function EditarProducto($param){
     $IdProducto = $param[0];
-
     $Categorias = $this->model->getCategorias();
     $Producto = $this->model->getProducto($IdProducto);
     $this->view->MostrarEditarProducto($Producto,$Categorias);
+
 
   }
 
@@ -59,15 +59,13 @@ class ProductosController extends SecuredController
     $precio = $_POST["precio"];
     $IdProducto = $_POST["IdProducto"];
 
-    if(!empty($nombre) && !empty($descripcion) && !empty($IdCategoria) && !empty($precio)){
+
       $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto);
       header(ADMIN);
-    }
-    else{
-      $Producto = $this->model->getProducto($IdProducto);
-      $Categorias = $this->model->getCategorias();
-      $this->view->MostrarEditarProducto($Producto,$Categorias, "Complete todos los campos");
-    }
+
+
+      
+
   }
 
 

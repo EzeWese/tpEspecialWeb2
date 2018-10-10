@@ -29,7 +29,7 @@ function parseURL($url)
     if(array_key_exists($action,ConfigApp::$ACTIONS)){
         $params = $urlData[ConfigApp::$PARAMS];
         $action = explode('#',ConfigApp::$ACTIONS[$action]); //Array[0] -> ProductosController [1] -> BorrarTarea
-        $controller =  new $action[0]();
+        $controller =  new $action[0](); //ejemplo new PageController
         $metodo = $action[1];
         if(isset($params) &&  $params != null){
             echo $controller->$metodo($params);
