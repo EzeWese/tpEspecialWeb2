@@ -4,7 +4,7 @@ define('HOME', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["P
 define('LOGIN', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/login');
 define('LOGOUT', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/logout');
 define('ADMIN', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/admin');
-  class ConfigApp
+class ConfigApp
   {
 
     public static $ACTION = 'action';
