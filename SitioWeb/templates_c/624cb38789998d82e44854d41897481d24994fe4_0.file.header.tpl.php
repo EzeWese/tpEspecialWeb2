@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-10 20:54:46
+/* Smarty version 3.1.33, created on 2018-10-12 20:23:01
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bbe4af6988559_99720124',
+  'unifunc' => 'content_5bc0e6853c7455_48671390',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '624cb38789998d82e44854d41897481d24994fe4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\header.tpl',
-      1 => 1539197294,
+      1 => 1539368380,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bbe4af6988559_99720124 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc0e6853c7455_48671390 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -29,11 +29,13 @@ function content_5bbe4af6988559_99720124 (Smarty_Internal_Template $_smarty_tpl)
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Matepedia</title>
+  <base href="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/" target="_blank">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="icon" href="imagenes/mate.png">
-  <base href="<?php echo $_SERVER['SERVER_NAME'];?>
-" target="_blank">
+  <base href="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/" target="_blank">
 </head>
 
 <body>

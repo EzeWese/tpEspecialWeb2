@@ -9,30 +9,14 @@
           <div class="col-6">
             <h2>Productos</h2>
           </div>
-<div class="col-12">
-          <ul class="list-group">
-            {foreach from=$Productos item=producto}
-
-            <li class="list-group-item"><a href="mostrarProducto/{$producto['id_producto']} "target="_self">{$producto['nombre']}</a></li>
-            {/foreach}
-          </ul>
-          </div>
-          <h2>Categorias</h2>
-          <div class="col-12">
-                    <ul class="list-group">
-                      {foreach from=$Categorias item=categoria}
-                      <li class="list-group-item">{$categoria['nombre']}</li>
-                      {/foreach}
-                    </ul>
-                    </div>
-          <!--  <div class="table-responsive">
+        <div class="table-responsive">
         <table class="table mb-3 mt-2">
             <thead>
               <tr>
               <th scope="col">Producto</th>
-              <th scope="col">Descripcion</th>
               <th scope="col">Categoria</th>
               <th scope="col">Precio</th>
+              <th></th>
             </tr>
           </thead>
           <tbody class="tabla-opiniones">
@@ -42,9 +26,9 @@
 
                 <ul class="btn-centrado">
                   <td>{$producto['nombre']}</td>
-                  <td>{$producto['descripcion']}</td>
                   <td>{$producto['categoria']}</td>
                   <td>{$producto['precio']}</td>
+                  <td><a href="detalle/{$producto['id_producto']}" target="_self">Detalles</a></td>
                 </tr>
 
               {/foreach}
@@ -52,7 +36,7 @@
 
           </tbody>
         </table>
-        </div>-->
+        </div>
       </div>
       <div class="informaciongeneral mt-3">
         <h2>Administrador</h2>

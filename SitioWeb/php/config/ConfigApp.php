@@ -26,7 +26,7 @@ class ConfigApp
       'register'=> 'LoginController#register',
       'verificarRegister'=> 'LoginController#verificarRegister',
       'nuevaCategoria'=> 'ProductosController#InsertCategoria',
-      'mostrarProducto'=> 'PageController#mostrarProducto',
+      'detalle'=> 'PageController#mostrarDetalle',
       'editarCategoria'=> 'ProductosController#EditarCategoria',
       'guardarCategoria'=> 'ProductosController#GuardarEditarCategoria'
     ];

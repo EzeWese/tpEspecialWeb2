@@ -32,10 +32,10 @@ class PageController
     $Categorias = $this->model->getCategorias();
     $this->view->MostrarProductos($Productos,$Categorias);
   }
-  function mostrarProducto($param){
+  function mostrarDetalle($param){
     $IdProducto = $param[0];
     $Producto = $this->model->getProducto($IdProducto);
-    $this->view->MostrarProducto($Producto);
+    $this->view->mostrarDetalle($Producto);
   }
 }
 

@@ -34,7 +34,7 @@
             {$message}
           </div>
           <div class="botonesForm">
-            <button type="submit" class="btn btn-lg btn-enviar">Cargar</button>
+            <button type="submit" class="btn btn-lg btn-enviar">Cargar nuevo producto</button>
           </div>
         </form>
         <form action="nuevaCategoria" method="post" target="_self">
@@ -50,23 +50,13 @@
         </form>
         <form action="post" method="logout" target="_self">
           <div class="botonesForm mt-3">
-            <button type="submit" class="btn btn-lg btn-enviar">Logout</button>
+            <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
           </div>
         </form>
         </div>
         <div class="informaciongeneral row test mt-3 mb-3">
           <div class="col-6">
             <h2>Productos</h2>
-          </div>
-          <div class="col-6 filtro">
-            <div class="row">
-              <form class="">
-                <label>Filtrar por Categoria</label>
-                <input class="filtrar" type="text">
-              </form>
-              <button class="btn-filtrar">Filtrar</button>
-              <button class="btn-limpiar">Limpiar Filtros</button>
-            </div>
           </div>
           <div class="table-responsive">
           <table class="table mb-3 mt-2">
@@ -105,7 +95,7 @@
         <table class="table mb-3 mt-2">
         <thead>
           <tr>
-          <th scope="col">Producto</th>
+          <th scope="col">Categorias</th>
           <th scope="col"></th>
         <tbody class="tabla-opiniones">
         {foreach from=$Categorias item=categoria}
@@ -120,7 +110,7 @@
                 </div>
       <form method="post" action="register" target="_self">
         <div class="botonesForm mt-3">
-          <button type="submit" class="btn btn-lg btn-enviar">Register</button>
+          <button type="submit" class="btn btn-lg btn-enviar">Registrar nuevo usuario</button>
         </div>
       </form>
     </article>

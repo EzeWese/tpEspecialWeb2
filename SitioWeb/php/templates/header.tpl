@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Matepedia</title>
+  <base href="{$home}/" target="_blank">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="icon" href="imagenes/mate.png">
-  <base href="{$smarty.server.SERVER_NAME}" target="_blank">
+  <base href="{$home}/" target="_blank">
 </head>
 
 <body>

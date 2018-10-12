@@ -19,7 +19,7 @@
 
     function getProductos(){
 
-      $sentencia = $this->db->prepare("select * from producto");
+      $sentencia = $this->db->prepare("select * from producto ORDER BY categoria");
       $sentencia->execute();
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
