@@ -58,6 +58,11 @@ class ProductosController extends SecuredController
 
 
   }
+  function BorrarCategoria($param){
+    $this->model->BorrarCategoria($param[0]);
+    header(ADMIN);
+  }
+
 
   function GuardarEditarProducto(){
     $nombre = $_POST["nombreProducto"];

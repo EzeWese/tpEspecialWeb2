@@ -42,6 +42,11 @@
       $sentencia->execute(array($IdProducto));
       return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
+    function getProductoPorCategoria($IdCategoria){
+      $sentencia = $this->db->prepare("SELECT * FROM producto WHERE id_categoria=?");
+      $sentencia->execute(array($IdCategoria));
+      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    }
 
     function InsertarProducto($IdCategoria,$nombre,$precio,$descripcion){
 
@@ -57,6 +62,13 @@
       $sentencia = $this->db->prepare("DELETE FROM producto WHERE id_producto=?");
       $sentencia->execute(array($idProducto));
     }
+
+    function BorrarCategoria($IdCategoria){
+
+      $sentencia = $this->db->prepare("DELETE FROM categoria WHERE id_categoria=?");
+      $sentencia->execute(array($IdCategoria));
+    }
+
 
     function EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto){
       $arrcategoria = $this->getCategoria($IdCategoria);

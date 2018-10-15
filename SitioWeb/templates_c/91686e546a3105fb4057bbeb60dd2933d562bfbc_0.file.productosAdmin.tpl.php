@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-12 20:31:29
+/* Smarty version 3.1.33, created on 2018-10-15 21:05:30
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc0e8818071f3_24413558',
+  'unifunc' => 'content_5bc4e4faf3ef86_88290925',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '91686e546a3105fb4057bbeb60dd2933d562bfbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1539369088,
+      1 => 1539630166,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc0e8818071f3_24413558 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc4e4faf3ef86_88290925 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -33,15 +33,15 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
       <div class="informaciongeneral encuesta">
         <form method="post" action="agregar" target="_self">
           <div class="form-group">
-            <label for="nombreProducto">Nombre de Producto</label>
+            <label for="nombreProducto">Nombre de Producto*</label>
             <input type="text" class="form-control respuestas" id="nombreProducto" value="" placeholder="" name="nombreProducto">
           </div>
           <div class="form-group">
-            <label for="descripcion">Descripcion</label>
+            <label for="descripcion">Descripcion*</label>
             <textarea class="form-control respuestas" id="descripcion" placeholder="" name="descripcion"></textarea>
           </div>
           <div class="form-group">
-            <label for="categoria">Categoria</label>
+            <label for="categoria">Categoria*</label>
             <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
 
               <?php
@@ -62,7 +62,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
           </div>
           <div class="form-group">
-            <label for="precioP">Precio</label>
+            <label for="precioP">Precio*</label>
             <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio">
           </div>
           <div class="">
@@ -73,17 +73,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <button type="submit" class="btn btn-lg btn-enviar">Cargar nuevo producto</button>
           </div>
         </form>
+        <div class="mt-3">
+          <h2>Crear nueva Categoria</h2>
+
+
         <form action="nuevaCategoria" method="post" target="_self">
           <div class="form-group">
-            <label for="nuevaCategoria">Nombre</label>
+            <label for="nuevaCategoria">Nombre*</label>
             <input id="nuevaCategoria"type="text" name="nuevaCategoria" value="" required>
-            <label for="descripcionNuevaCategoria">Descripcion</label>
+            </div>
+            <div class="form-group">
+            <label for="descripcionNuevaCategoria">Descripcion*</label>
             <textarea class="form-control respuestas" id="descripcionNuevaCategoria" placeholder="" name="descripcionNuevaCategoria" required></textarea>
             </div>
           <div class="botonesForm mt-3">
             <button type="submit" class="btn btn-lg btn-enviar">Nueva Categoria</button>
           </div>
         </form>
+          </div>
         <form action="post" method="logout" target="_self">
           <div class="botonesForm mt-3">
             <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
@@ -145,7 +152,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <thead>
           <tr>
           <th scope="col">Categorias</th>
-          <th scope="col"></th>
+          <th scope="col">Borrar</th>
+          <th scope="col">Editar</th>
         <tbody class="tabla-opiniones">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
@@ -155,8 +163,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
         <tr class="btn-centrado">
           <td><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
 </td>
+          <td><a href="borrarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+" target="_self">Borrar Categoria</a></td>
           <td><a href="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
-" target="_self">EDITAR Categoria</a></td>
+" target="_self">Editar Categoria</a></td>
         </tr>
           <?php
 }

@@ -7,15 +7,15 @@
       <div class="informaciongeneral encuesta">
         <form method="post" action="agregar" target="_self">
           <div class="form-group">
-            <label for="nombreProducto">Nombre de Producto</label>
+            <label for="nombreProducto">Nombre de Producto*</label>
             <input type="text" class="form-control respuestas" id="nombreProducto" value="" placeholder="" name="nombreProducto">
           </div>
           <div class="form-group">
-            <label for="descripcion">Descripcion</label>
+            <label for="descripcion">Descripcion*</label>
             <textarea class="form-control respuestas" id="descripcion" placeholder="" name="descripcion"></textarea>
           </div>
           <div class="form-group">
-            <label for="categoria">Categoria</label>
+            <label for="categoria">Categoria*</label>
             <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
 
               {foreach from=$Categorias item=categoria}
@@ -27,7 +27,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="precioP">Precio</label>
+            <label for="precioP">Precio*</label>
             <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio">
           </div>
           <div class="">
@@ -37,17 +37,24 @@
             <button type="submit" class="btn btn-lg btn-enviar">Cargar nuevo producto</button>
           </div>
         </form>
+        <div class="mt-3">
+          <h2>Crear nueva Categoria</h2>
+
+
         <form action="nuevaCategoria" method="post" target="_self">
           <div class="form-group">
-            <label for="nuevaCategoria">Nombre</label>
+            <label for="nuevaCategoria">Nombre*</label>
             <input id="nuevaCategoria"type="text" name="nuevaCategoria" value="" required>
-            <label for="descripcionNuevaCategoria">Descripcion</label>
+            </div>
+            <div class="form-group">
+            <label for="descripcionNuevaCategoria">Descripcion*</label>
             <textarea class="form-control respuestas" id="descripcionNuevaCategoria" placeholder="" name="descripcionNuevaCategoria" required></textarea>
             </div>
           <div class="botonesForm mt-3">
             <button type="submit" class="btn btn-lg btn-enviar">Nueva Categoria</button>
           </div>
         </form>
+          </div>
         <form action="post" method="logout" target="_self">
           <div class="botonesForm mt-3">
             <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
@@ -96,12 +103,14 @@
         <thead>
           <tr>
           <th scope="col">Categorias</th>
-          <th scope="col"></th>
+          <th scope="col">Borrar</th>
+          <th scope="col">Editar</th>
         <tbody class="tabla-opiniones">
         {foreach from=$Categorias item=categoria}
         <tr class="btn-centrado">
           <td>{$categoria['nombre']}</td>
-          <td><a href="editarCategoria/{$categoria['id_categoria']}" target="_self">EDITAR Categoria</a></td>
+          <td><a href="borrarCategoria/{$categoria['id_categoria']}" target="_self">Borrar Categoria</a></td>
+          <td><a href="editarCategoria/{$categoria['id_categoria']}" target="_self">Editar Categoria</a></td>
         </tr>
           {/foreach}
           </tbody>

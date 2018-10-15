@@ -37,6 +37,13 @@ class PageController
     $Producto = $this->model->getProducto($IdProducto);
     $this->view->mostrarDetalle($Producto);
   }
+  function filtrarPorCategoria(){
+    $IdCategoria = $_POST["IdCategoria"];
+    $Productos = $this->model->getProductoPorCategoria($IdCategoria);
+    $Categorias = $this->model->getCategorias();
+    $this->view->MostrarProductos($Productos,$Categorias);
+
+  }
 }
 
  ?>

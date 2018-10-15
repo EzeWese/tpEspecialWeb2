@@ -28,7 +28,9 @@ class ConfigApp
       'nuevaCategoria'=> 'ProductosController#InsertCategoria',
       'detalle'=> 'PageController#mostrarDetalle',
       'editarCategoria'=> 'ProductosController#EditarCategoria',
-      'guardarCategoria'=> 'ProductosController#GuardarEditarCategoria'
+      'guardarCategoria'=> 'ProductosController#GuardarEditarCategoria',
+      'borrarCategoria'=> 'ProductosController#BorrarCategoria',
+      'filtrarPorCategoria'=> 'PageController#filtrarPorCategoria'
     ];
 
 

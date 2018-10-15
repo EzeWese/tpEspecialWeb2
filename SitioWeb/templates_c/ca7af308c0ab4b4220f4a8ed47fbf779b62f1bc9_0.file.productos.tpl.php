@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-12 20:32:24
+/* Smarty version 3.1.33, created on 2018-10-15 21:29:04
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc0e8b8e265d3_19135443',
+  'unifunc' => 'content_5bc4ea804818d2_38998422',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca7af308c0ab4b4220f4a8ed47fbf779b62f1bc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1539369139,
+      1 => 1539631739,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc0e8b8e265d3_19135443 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc4ea804818d2_38998422 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -40,7 +40,29 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
             <thead>
               <tr>
               <th scope="col">Producto</th>
-              <th scope="col">Categoria</th>
+              <th scope="col">Categoria
+                 <form class="row" action="filtrarPorCategoria" method="post" target="_self">
+                  <div class="col">
+                  <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
+?>
+                      <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+"><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
+</option>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                  </select>
+                  </div>
+                  <div class="col">
+                  <button type="submit" class="btn  btn-enviar">Filtrar</button>
+                  </div>
+                  </form>
+                  </th>
               <th scope="col">Precio</th>
               <th></th>
             </tr>
