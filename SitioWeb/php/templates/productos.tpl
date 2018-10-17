@@ -24,7 +24,8 @@
                   </select>
                   </div>
                   <div class="col">
-                  <button type="submit" class="btn  btn-enviar">Filtrar</button>
+                  <button type="submit" class="btn  btn-enviar ">Filtrar</button>
+                  <a type="button"class="btn  btn-enviar " href="productos" target="_self" >Limpiar filtro</a>
                   </div>
                   </form>
                   </th>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-15 21:05:30
+/* Smarty version 3.1.33, created on 2018-10-15 22:00:14
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc4e4faf3ef86_88290925',
+  'unifunc' => 'content_5bc4f1ce79a662_81606447',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '91686e546a3105fb4057bbeb60dd2933d562bfbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1539630166,
+      1 => 1539633611,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc4e4faf3ef86_88290925 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc4f1ce79a662_81606447 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -91,11 +91,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
         </form>
           </div>
-        <form action="post" method="logout" target="_self">
-          <div class="botonesForm mt-3">
-            <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
-          </div>
-        </form>
+
         </div>
         <div class="informaciongeneral row test mt-3 mb-3">
           <div class="col-6">
@@ -176,6 +172,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </table>
 
                 </div>
+                <form action="post" method="logout" target="_self">
+                  <div class="botonesForm mt-3">
+                    <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
+                  </div>
+                </form>
       <form method="post" action="register" target="_self">
         <div class="botonesForm mt-3">
           <button type="submit" class="btn btn-lg btn-enviar">Registrar nuevo usuario</button>

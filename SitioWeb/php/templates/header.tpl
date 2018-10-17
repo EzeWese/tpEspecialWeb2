@@ -17,8 +17,7 @@
   <header class="container-fluid noPadding">
     <h1 class="text-center align-top">MATEPEDIA</h1>
     <nav class="navbar navbar-expand-md navbar-light ">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,4 +41,4 @@
       </div>
     </nav>
   </header>
-<div class="cuerpo">
+  <div class="cuerpo">
