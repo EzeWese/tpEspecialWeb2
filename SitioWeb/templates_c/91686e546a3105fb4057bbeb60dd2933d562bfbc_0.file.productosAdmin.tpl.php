@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-18 14:59:37
+/* Smarty version 3.1.33, created on 2018-10-19 00:57:39
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc883b9469b05_69695072',
+  'unifunc' => 'content_5bc90fe32e1f27_15956120',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '91686e546a3105fb4057bbeb60dd2933d562bfbc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1539867546,
+      1 => 1539897777,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc883b9469b05_69695072 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc90fe32e1f27_15956120 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -127,9 +127,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
 </td>
               <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
 </td>
-              <td><a href="borrar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+              <td><a type="button"class="btn btn-enviar" href="borrar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
 " target="_self">BORRAR</a></td>
-              <td><a href="editar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+              <td><a type="button"class="btn btn-enviar" href="editar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
 " target="_self">EDITAR</a></td>
             </tr>
 
@@ -159,9 +159,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
           <tr class="btn-centrado">
             <td><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
 </td>
-            <td><a href="borrarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+            <td><a type="button"class="btn btn-enviar" href="borrarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
 " target="_self">Borrar Categoria</a></td>
-            <td><a href="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+            <td><a type="button"class="btn btn-enviar " href="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
 " target="_self">Editar Categoria</a></td>
           </tr>
           <?php

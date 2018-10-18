@@ -42,7 +42,7 @@
                   <td>{$producto['nombre']}</td>
                   <td>{$producto['categoria']}</td>
                   <td>{$producto['precio']}</td>
-                  <td><a href="detalle/{$producto['id_producto']}" target="_self">Detalles</a></td>
+                  <td><a type="button"class="btn btn-enviar"href="detalle/{$producto['id_producto']}" target="_self">Detalles</a></td>
                 </tr>
 
               {/foreach}

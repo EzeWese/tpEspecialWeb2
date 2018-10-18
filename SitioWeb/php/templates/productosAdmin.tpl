@@ -83,8 +83,8 @@
               <td>{$producto['descripcion']}</td>
               <td>{$producto['categoria']}</td>
               <td>{$producto['precio']}</td>
-              <td><a href="borrar/{$producto['id_producto']}" target="_self">BORRAR</a></td>
-              <td><a href="editar/{$producto['id_producto']}" target="_self">EDITAR</a></td>
+              <td><a type="button"class="btn btn-enviar" href="borrar/{$producto['id_producto']}" target="_self">BORRAR</a></td>
+              <td><a type="button"class="btn btn-enviar" href="editar/{$producto['id_producto']}" target="_self">EDITAR</a></td>
             </tr>
 
             {/foreach}
@@ -105,8 +105,8 @@
           {foreach from=$Categorias item=categoria}
           <tr class="btn-centrado">
             <td>{$categoria['nombre']}</td>
-            <td><a href="borrarCategoria/{$categoria['id_categoria']}" target="_self">Borrar Categoria</a></td>
-            <td><a href="editarCategoria/{$categoria['id_categoria']}" target="_self">Editar Categoria</a></td>
+            <td><a type="button"class="btn btn-enviar" href="borrarCategoria/{$categoria['id_categoria']}" target="_self">Borrar Categoria</a></td>
+            <td><a type="button"class="btn btn-enviar " href="editarCategoria/{$categoria['id_categoria']}" target="_self">Editar Categoria</a></td>
           </tr>
           {/foreach}
         </tbody>

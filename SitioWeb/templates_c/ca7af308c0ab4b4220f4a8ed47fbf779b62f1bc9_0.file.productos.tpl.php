@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-15 21:58:44
+/* Smarty version 3.1.33, created on 2018-10-19 00:56:34
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc4f17406c316_04561474',
+  'unifunc' => 'content_5bc90fa26ad856_63467956',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca7af308c0ab4b4220f4a8ed47fbf779b62f1bc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1539633521,
+      1 => 1539897658,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc4f17406c316_04561474 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc90fa26ad856_63467956 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -84,7 +84,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
 </td>
                   <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
 </td>
-                  <td><a href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+                  <td><a type="button"class="btn btn-enviar"href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
 " target="_self">Detalles</a></td>
                 </tr>
 

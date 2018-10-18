@@ -9,6 +9,17 @@ require_once "php/controller/SecuredController.php";
 #[borrar][1]
 #completada/2
 #agregar
+function dataBase(){
+try{
+  $connection = new PDO('mysql:host=localhost;dbname=db_productos;charset=utf8', 'root', '');
+}catch(Exception $e){
+  $db = new PDO('mysql:host=localhost;charset=utf8', 'root', '');
+      $sql = file_get_contents('db_productos.sql');
+      $db->exec($sql);
+      }
+}
+
+dataBase();
 
 function parseURL($url)
 {
