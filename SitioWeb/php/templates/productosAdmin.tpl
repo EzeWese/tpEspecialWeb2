@@ -8,11 +8,11 @@
       <form method="post" action="agregar" target="_self">
         <div class="form-group">
           <label for="nombreProducto">Nombre de Producto*</label>
-          <input type="text" class="form-control respuestas" id="nombreProducto" value="" placeholder="" name="nombreProducto">
+          <input type="text" class="form-control respuestas" id="nombreProducto" value="" placeholder="" name="nombreProducto" required>
         </div>
         <div class="form-group">
           <label for="descripcion">Descripcion*</label>
-          <textarea class="form-control respuestas" id="descripcion" placeholder="" name="descripcion"></textarea>
+          <textarea class="form-control respuestas" id="descripcion" placeholder="" name="descripcion" required></textarea>
         </div>
         <div class="form-group">
           <label for="categoria">Categoria*</label>
@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
           <label for="precioP">Precio*</label>
-          <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio">
+          <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio" required>
         </div>
         <div class="">
           {$message}

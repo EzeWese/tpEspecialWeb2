@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-12 20:23:01
+/* Smarty version 3.1.33, created on 2018-10-18 14:54:21
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc0e6853c7455_48671390',
+  'unifunc' => 'content_5bc8827d57cb26_78005913',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '624cb38789998d82e44854d41897481d24994fe4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\header.tpl',
-      1 => 1539368380,
+      1 => 1539867214,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc0e6853c7455_48671390 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc8827d57cb26_78005913 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -42,8 +42,7 @@ function content_5bc0e6853c7455_48671390 (Smarty_Internal_Template $_smarty_tpl)
   <header class="container-fluid noPadding">
     <h1 class="text-center align-top">MATEPEDIA</h1>
     <nav class="navbar navbar-expand-md navbar-light ">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -67,6 +66,6 @@ function content_5bc0e6853c7455_48671390 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </nav>
   </header>
-<div class="cuerpo">
+  <div class="cuerpo">
 <?php }
 }
