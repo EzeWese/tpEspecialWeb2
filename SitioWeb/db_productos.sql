@@ -1,18 +1,21 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-10-2018 a las 21:33:46
--- Versión del servidor: 10.1.35-MariaDB
--- Versión de PHP: 7.2.9
-
-
-
+-- Tiempo de generación: 09-11-2018 a las 17:04:13
+-- Versión del servidor: 10.1.32-MariaDB
+-- Versión de PHP: 7.2.5
 
 CREATE database db_productos;
 
 use db_productos;
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -45,6 +48,26 @@ INSERT INTO `categoria` (`id_categoria`, `nombre`, `descripcion`) VALUES
 (6, 'Yerberas', 'Yerberas de todo tipo. Metal. Medera. Cuero.'),
 (7, 'Materas', 'Materas de todo tipo y materiales para llevar tu equipo de mate a todos lados.'),
 (8, 'Combos', 'Promociones de equipos de Mate Completos.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `imagen`
+--
+
+CREATE TABLE `imagen` (
+  `id_imagen` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `url` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `imagen`
+--
+
+INSERT INTO `imagen` (`id_imagen`, `id_producto`, `url`) VALUES
+(9, 20, 'images/5be27b3eea797.jpg'),
+(10, 20, 'images/5be27b3eecbcf.jpg');
 
 -- --------------------------------------------------------
 
@@ -87,6 +110,7 @@ INSERT INTO `producto` (`id_producto`, `id_categoria`, `nombre`, `categoria`, `p
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
+  `admin` tinyint(1) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `pass` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -95,9 +119,9 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre`, `pass`) VALUES
-(1, 'pepe', '$2y$10$si8oRTDUH5OhitHUNjmMi.TkFmnaQ5fJGITzoFqNyIeLwkiQVA.wG'),
-(3, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
+INSERT INTO `usuario` (`id_usuario`, `admin`, `nombre`, `pass`) VALUES
+(1, 1, 'pepe', '$2y$10$si8oRTDUH5OhitHUNjmMi.TkFmnaQ5fJGITzoFqNyIeLwkiQVA.wG'),
+(3, 1, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
 
 --
 -- Índices para tablas volcadas
@@ -108,6 +132,13 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `pass`) VALUES
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id_categoria`);
+
+--
+-- Indices de la tabla `imagen`
+--
+ALTER TABLE `imagen`
+  ADD PRIMARY KEY (`id_imagen`),
+  ADD KEY `fk_producto` (`id_producto`);
 
 --
 -- Indices de la tabla `producto`
@@ -133,6 +164,12 @@ ALTER TABLE `categoria`
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT de la tabla `imagen`
+--
+ALTER TABLE `imagen`
+  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -149,10 +186,17 @@ ALTER TABLE `usuario`
 --
 
 --
+-- Filtros para la tabla `imagen`
+--
+ALTER TABLE `imagen`
+  ADD CONSTRAINT `fk_producto` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
+
+--
 -- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
