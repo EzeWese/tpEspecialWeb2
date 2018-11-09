@@ -33,12 +33,10 @@ require('php/libs/Smarty.class.php');
       $this->Smarty->display('php/templates/productos.tpl');
     }
 
-    function mostrarDetalle($Producto){
+    function mostrarDetalle($Producto, $Imagenes){
       $this->Smarty->assign('Producto',$Producto);
-
-
+      $this->Smarty->assign('Imagenes',$Imagenes);
       $this->Smarty->assign('home','http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
-
       $this->Smarty->display('php/templates/productoDetallado.tpl');
 
     }

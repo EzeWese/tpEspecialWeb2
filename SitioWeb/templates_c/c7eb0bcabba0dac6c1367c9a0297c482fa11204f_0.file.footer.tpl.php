@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 00:56:30
-  from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\footer.tpl' */
+/* Smarty version 3.1.33, created on 2018-10-19 16:43:50
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc90f9e12f903_48378638',
+  'unifunc' => 'content_5bc9eda666b5d1_82983543',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'e34d0f09aa009ca228c42567227f061f1f7d8e89' => 
+    'c7eb0bcabba0dac6c1367c9a0297c482fa11204f' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\footer.tpl',
-      1 => 1539783343,
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\footer.tpl',
+      1 => 1538163562,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc90f9e12f903_48378638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc9eda666b5d1_82983543 (Smarty_Internal_Template $_smarty_tpl) {
 ?></div>
 <footer class="container-fluid">
   <p>Página creada por Ezequiel Wesenack y Patricio Prado para el trabajo especial de la cátedra de web2 de la carrera de

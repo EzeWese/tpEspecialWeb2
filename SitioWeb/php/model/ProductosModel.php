@@ -11,15 +11,12 @@
 
     private function Connect(){
 
-      return new PDO('mysql:host=localhost;'
-    .'dbname=db_productos;charset=utf8'
-    , 'root', '');
-
+      return new PDO('mysql:host=localhost;'.'dbname=db_productos;charset=utf8', 'root', '');
     }
 
     function getProductos(){
 
-      $sentencia = $this->db->prepare("select * from producto ORDER BY categoria");
+      $sentencia = $this->db->prepare("SELECT * FROM producto ORDER BY categoria");
       $sentencia->execute();
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -48,14 +45,31 @@
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    function InsertarProducto($IdCategoria,$nombre,$precio,$descripcion){
+    function getImagenesPorProducto($IdProducto){
+      $sentencia = $this->db->prepare("SELECT * FROM imagen WHERE id_producto=?");
+      $sentencia->execute(array($IdProducto));
+      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    }
 
+    function InsertarProducto($IdCategoria,$nombre,$precio,$descripcion,$tempPaths){
       $arrcategoria = $this->getCategoria($IdCategoria);
       $categoria = $arrcategoria[0]["nombre"];
 
       $sentencia = $this->db->prepare("INSERT INTO producto(id_categoria, nombre, categoria, precio, descripcion) VALUES(?,?,?,?,?)");
       $sentencia->execute(array($IdCategoria,$nombre,$categoria,$precio,$descripcion));
+      $lastId = $this->db->lastInsertId();
+      $this->subirImagenes($tempPaths, $lastId);
+
     }
+
+    private function subirImagenes($tempPaths, $idProducto){
+      foreach ($tempPaths as $path) {
+        $destino_final = 'images/' . uniqid() . '.jpg';
+        move_uploaded_file($path, $destino_final);
+        $sentencia = $this->db->prepare("INSERT INTO imagen(id_producto, url) VALUES(?,?)");
+        $sentencia->execute(array($idProducto,$destino_final));
+      }
+   }
 
     function BorrarProducto($idProducto){
 
@@ -70,12 +84,14 @@
     }
 
 
-    function EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto){
+    function EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto,$tempPaths){
       $arrcategoria = $this->getCategoria($IdCategoria);
       $categoria = $arrcategoria[0]["nombre"];
 
       $sentencia = $this->db->prepare("UPDATE producto SET id_categoria = ?, nombre = ?, categoria = ?, precio = ?, descripcion = ? WHERE id_producto=?");
       $sentencia->execute(array($IdCategoria,$nombre,$categoria,$precio,$descripcion,$IdProducto));
+
+      $this->subirImagenes($tempPaths, $IdProducto);
 
     }
 
@@ -89,10 +105,6 @@
       $sentencia = $this->db->prepare("INSERT INTO categoria(nombre,descripcion) VALUES(?,?)");
       $sentencia->execute(array($nombreCategoria,$descripcionCategoria));
     }
-
-
-//UPDATE `producto` SET `id_producto`=[value-1],`id_categoria`=[value-2],`nombre`=[value-3],`categoria`=[value-4],`precio`=[value-5],`descripcion`=[value-6] WHERE 1
-
 
   }
  ?>

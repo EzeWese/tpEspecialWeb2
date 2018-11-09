@@ -5,7 +5,7 @@
       <h2>Editar Producto</h2>
     </div>
     <div class="justify-content-center informaciongeneral encuesta">
-      <form method="post" action="{$home}/guardar" target="_self">
+      <form method="post" action="{$home}/guardar" enctype="multipart/form-data" target="_self">
         <input type="hidden" class="form-control" id="IdProducto" name="IdProducto" value="{$Producto['id_producto']}" required>
         <div class="form-group">
           <label for="nombreProducto">Nombre de Producto</label>
@@ -31,13 +31,24 @@
           <label for="precioP">Precio</label>
           <input type="text" class="form-control respuestas" id="precioP" value="{$Producto['precio']}" placeholder="" name="precio" required>
         </div>
-        <div class="">
-          {$message}
+        <div class="form-group">
+          <label for="imagenes[]">Imágenes</label>
+          <input type="file" class="form-control-file respuestas" id="imagenes[]" placeholder="" name="imagenes[]" multiple>
         </div>
-        <div class="botonesForm mt-3">
+        <div class="botonesForm mt-3 mb-3">
           <button type="submit" class="btn btn-lg btn-enviar">Guardar</button>
         </div>
       </form>
+      <div class="justify-content-center informaciongeneral mt-3 mb-3">
+        <h3>Imágenes</h3>
+      </div>
+      <div class="mb-3">
+        <ul class="list-group">
+          {foreach from=$Imagenes item=imagen}
+          <li class="list-group-item d-flex justify-content-between align-items-center">{$imagen['url']}  <span class="badge badge-primary badge-pill"><a href="borrarImagen/{$imagen['id_imagen']}">Borrar</a></span></li>
+          {/foreach}
+        </ul>
+      </div>
     </div>
   </article>
 </div>

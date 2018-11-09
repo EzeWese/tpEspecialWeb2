@@ -5,7 +5,7 @@
       <h2>Cargar Producto</h2>
     </div>
     <div class="informaciongeneral encuesta">
-      <form method="post" action="agregar" target="_self">
+      <form method="post" action="agregar" enctype="multipart/form-data" target="_self">
         <div class="form-group">
           <label for="nombreProducto">Nombre de Producto*</label>
           <input type="text" class="form-control respuestas" id="nombreProducto" value="" placeholder="" name="nombreProducto" required>
@@ -30,8 +30,9 @@
           <label for="precioP">Precio*</label>
           <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio" required>
         </div>
-        <div class="">
-          {$message}
+        <div class="form-group">
+          <label for="imagenes[]">Imágenes</label>
+          <input type="file" class="form-control-file respuestas" id="imagenes[]" placeholder="" name="imagenes[]" multiple>
         </div>
         <div class="botonesForm">
           <button type="submit" class="btn btn-lg btn-enviar">Cargar nuevo producto</button>
@@ -74,8 +75,6 @@
             </tr>
           </thead>
           <tbody class="tabla-opiniones">
-
-
             {foreach from=$Productos item=producto}
 
             <tr class="btn-centrado">
@@ -115,7 +114,7 @@
     </div>
     <form action="post" method="logout" target="_self">
       <div class="botonesForm mt-3">
-        <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
+        <button type="submit" class="btn btn-lg btn-enviar">Cerrar sesion</button>
       </div>
     </form>
     <form method="post" action="register" target="_self">

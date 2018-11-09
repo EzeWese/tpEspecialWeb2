@@ -29,28 +29,29 @@ class LoginController
   }
 
   function verificarLogin(){
-    if(!empty($_POST["usuarioId"]) && !empty($_POST["passwordId"])){
       $usuario = $_POST["usuarioId"];
       $pass = $_POST["passwordId"];
       $dbUser = $this->model->getUser($usuario); //ojo devuelve arreglo de una sola posicion, ver en UsuarioModel
 
-      if(isset($dbUser[0])){
-            if (password_verify($pass, $dbUser[0]["pass"])){
-                //mostrar lista de productos
-                session_start();
-                $_SESSION["User"] = $usuario;
-                header(ADMIN);
-            }
-            else{
-              $this->view->mostrarLogin("Contraseña incorrecta");
-            }
+      if (isset($dbUser[0])) {
+
+        if($dbUser[0]["admin"] == 1){
+              if (password_verify($pass, $dbUser[0]["pass"])){
+                  //mostrar lista de productos
+                  session_start();
+                  $_SESSION["User"] = $usuario;
+                  header(ADMIN);
+              }
+              else{
+                $this->view->mostrarLogin("Contraseña incorrecta");
+              }
         }
         else{
-          $this->view->mostrarLogin("No existe el usuario");
+            $this->view->mostrarLogin("No eres administrador");
         }
       }
       else {
-        $this->view->mostrarLogin("Complete todos los campos");
+        $this->view->mostrarLogin("No existe el usuario");
       }
 
   }

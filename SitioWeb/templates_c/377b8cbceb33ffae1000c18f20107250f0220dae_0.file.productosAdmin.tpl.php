@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 00:57:39
-  from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
+/* Smarty version 3.1.33, created on 2018-11-09 05:41:22
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc90fe32e1f27_15956120',
+  'unifunc' => 'content_5be50ff2636a79_31155684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '91686e546a3105fb4057bbeb60dd2933d562bfbc' => 
+    '377b8cbceb33ffae1000c18f20107250f0220dae' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1539897777,
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
+      1 => 1541738302,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc90fe32e1f27_15956120 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be50ff2636a79_31155684 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
       <h2>Cargar Producto</h2>
     </div>
     <div class="informaciongeneral encuesta">
-      <form method="post" action="agregar" target="_self">
+      <form method="post" action="agregar" enctype="multipart/form-data" target="_self">
         <div class="form-group">
           <label for="nombreProducto">Nombre de Producto*</label>
           <input type="text" class="form-control respuestas" id="nombreProducto" value="" placeholder="" name="nombreProducto" required>
@@ -65,9 +65,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           <label for="precioP">Precio*</label>
           <input type="text" class="form-control respuestas" id="precioP" placeholder="" name="precio" required>
         </div>
-        <div class="">
-          <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-
+        <div class="form-group">
+          <label for="imagenes[]">Imágenes</label>
+          <input type="file" class="form-control-file respuestas" id="imagenes[]" placeholder="" name="imagenes[]" multiple>
         </div>
         <div class="botonesForm">
           <button type="submit" class="btn btn-lg btn-enviar">Cargar nuevo producto</button>
@@ -110,8 +110,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </tr>
           </thead>
           <tbody class="tabla-opiniones">
-
-
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Productos']->value, 'producto');
 if ($_from !== null) {
@@ -174,7 +172,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
     <form action="post" method="logout" target="_self">
       <div class="botonesForm mt-3">
-        <button type="submit" class="btn btn-lg btn-enviar">Cerra sesion</button>
+        <button type="submit" class="btn btn-lg btn-enviar">Cerrar sesion</button>
       </div>
     </form>
     <form method="post" action="register" target="_self">

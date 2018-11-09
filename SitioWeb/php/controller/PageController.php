@@ -35,7 +35,8 @@ class PageController
   function mostrarDetalle($param){
     $IdProducto = $param[0];
     $Producto = $this->model->getProducto($IdProducto);
-    $this->view->mostrarDetalle($Producto);
+    $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
+    $this->view->mostrarDetalle($Producto, $Imagenes);
   }
   function filtrarPorCategoria(){
     $IdCategoria = $_POST["IdCategoria"];

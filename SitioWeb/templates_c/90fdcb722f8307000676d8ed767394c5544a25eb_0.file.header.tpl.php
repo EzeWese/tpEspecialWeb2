@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 00:56:30
-  from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\header.tpl' */
+/* Smarty version 3.1.33, created on 2018-10-19 16:43:50
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc90f9e0566c7_21232380',
+  'unifunc' => 'content_5bc9eda663c4a3_03015987',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '624cb38789998d82e44854d41897481d24994fe4' => 
+    '90fdcb722f8307000676d8ed767394c5544a25eb' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\header.tpl',
-      1 => 1539867214,
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\header.tpl',
+      1 => 1539960159,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc90f9e0566c7_21232380 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc9eda663c4a3_03015987 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 

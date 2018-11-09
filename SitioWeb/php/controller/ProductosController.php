@@ -17,11 +17,11 @@ class ProductosController extends SecuredController
     $this->model = new ProductosModel();
   }
 
-  function ProductosAdmin($message = ''){
+  function ProductosAdmin(){
 
     $Productos = $this->model->getProductos();
     $Categorias = $this->model->getCategorias();
-    $this->view->MostrarProductosAdmin($Productos,$Categorias,$message);
+    $this->view->MostrarProductosAdmin($Productos,$Categorias);
   }
 
   function InsertProducto(){
@@ -29,13 +29,12 @@ class ProductosController extends SecuredController
       $descripcion = $_POST["descripcion"];
       $IdCategoria = $_POST["IdCategoria"];
       $precio = $_POST["precio"];
-      if(isset($nombre) && isset($descripcion) && isset($IdCategoria) && isset($precio)){
-        $this->model->InsertarProducto($IdCategoria,$nombre,$precio,$descripcion);
-        header(ADMIN);
-      }
-      else{
-      $this->ProductosAdmin("Completar todos los campos");
-      }
+
+      $rutaTempImagenes = $_FILES['imagenes']['tmp_name'];
+
+      $this->model->InsertarProducto($IdCategoria,$nombre,$precio,$descripcion,$rutaTempImagenes);
+      header(ADMIN);
+
   }
 
   function BorrarProducto($param){
@@ -47,7 +46,8 @@ class ProductosController extends SecuredController
     $IdProducto = $param[0];
     $Categorias = $this->model->getCategorias();
     $Producto = $this->model->getProducto($IdProducto);
-    $this->view->MostrarEditarProducto($Producto,$Categorias);
+    $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
+    $this->view->MostrarEditarProducto($Producto,$Categorias,$Imagenes);
 
 
   }
@@ -70,7 +70,10 @@ class ProductosController extends SecuredController
     $IdCategoria = $_POST["IdCategoria"];
     $precio = $_POST["precio"];
     $IdProducto = $_POST["IdProducto"];
-    $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto);
+
+    $rutaTempImagenes = $_FILES['imagenes']['tmp_name'];
+
+    $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto,$rutaTempImagenes);
     header(ADMIN);
   }
   function GuardarEditarCategoria(){

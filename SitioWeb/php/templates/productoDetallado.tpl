@@ -23,6 +23,26 @@
           <label for="precioP">Precio</label>
           <input type="text" class="form-control respuestas" id="precioP" value="{$Producto['precio']}" placeholder="" name="precio" disabled>
         </div>
+        <div class="justify-content-center informaciongeneral mt-3 mb-3">
+          <h3>Imágenes</h3>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            {foreach from=$Imagenes item=imagen}
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="php/{$imagen['url']}" alt="">
+              </div>
+            {/foreach}
+          </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
 
         <div class="botonesForm mt-3">
           <button type="submit" class="btn btn-lg btn-enviar">Volver</button>

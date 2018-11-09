@@ -9,11 +9,11 @@
       <form method="post" action="verificarLogin" target="_self">
         <div class="form-group">
           <label for="usuarioId">Usuario</label>
-          <input type="input" class="form-control respuestas" id="usuarioId" value="" placeholder="Usuario" name="usuarioId">
+          <input type="input" class="form-control respuestas" id="usuarioId" value="" placeholder="Usuario" name="usuarioId" required>
         </div>
         <div class="form-group">
           <label for="passwordId">Password</label>
-          <input type="password" class="form-control respuestas" id="passwordId" placeholder="Password" name="passwordId">
+          <input type="password" class="form-control respuestas" id="passwordId" placeholder="Password" name="passwordId" required>
         </div>
         <div class="">
           {$message}

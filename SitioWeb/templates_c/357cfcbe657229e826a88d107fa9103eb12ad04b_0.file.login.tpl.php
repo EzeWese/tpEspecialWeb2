@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 00:57:36
-  from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\login.tpl' */
+/* Smarty version 3.1.33, created on 2018-11-06 03:50:46
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc90fe0885119_45797761',
+  'unifunc' => 'content_5be101863faca8_01782410',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'efd64a25aa40aee6bfab21aa248afa1c1ff96f1c' => 
+    '357cfcbe657229e826a88d107fa9103eb12ad04b' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\login.tpl',
-      1 => 1539867214,
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\login.tpl',
+      1 => 1541472641,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bc90fe0885119_45797761 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be101863faca8_01782410 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -35,11 +35,11 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
       <form method="post" action="verificarLogin" target="_self">
         <div class="form-group">
           <label for="usuarioId">Usuario</label>
-          <input type="input" class="form-control respuestas" id="usuarioId" value="" placeholder="Usuario" name="usuarioId">
+          <input type="input" class="form-control respuestas" id="usuarioId" value="" placeholder="Usuario" name="usuarioId" required>
         </div>
         <div class="form-group">
           <label for="passwordId">Password</label>
-          <input type="password" class="form-control respuestas" id="passwordId" placeholder="Password" name="passwordId">
+          <input type="password" class="form-control respuestas" id="passwordId" placeholder="Password" name="passwordId" required>
         </div>
         <div class="">
           <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
