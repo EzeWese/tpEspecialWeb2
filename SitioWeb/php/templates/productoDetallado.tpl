@@ -44,6 +44,15 @@
             </a>
         </div>
 
+        <div class="justify-content-center informaciongeneral mt-3 mb-3">
+          <h3>Comentarios</h3>
+        </div>
+        <div class="comentario">
+          //Comentarios
+        </div>
+
+
+
         <div class="botonesForm mt-3">
           <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
         </div>

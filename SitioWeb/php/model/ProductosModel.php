@@ -106,5 +106,28 @@
       $sentencia->execute(array($nombreCategoria,$descripcionCategoria));
     }
 
+    function getComentarios(){
+      $sentencia = $this->db->prepare("SELECT * FROM comentario");
+      $sentencia->execute();
+      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    function getComentario($IdComentario){
+      $sentencia = $this->db->prepare("SELECT * FROM comentario WHERE id_comentario=?");
+      $sentencia->execute($IdComentario);
+      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    function BorrarComentario($IdComentario){
+
+      $sentencia = $this->db->prepare("DELETE FROM comentario WHERE id_comentario=?");
+      $sentencia->execute(array($IdComentario));
+    }
+
+    function InsertComentario($IdProducto,$IdUsuario,$Comentario,$Puntaje){
+      $sentencia = $this->db->prepare("INSERT INTO comentario(id_producto,id_usuario,comentario,puntaje) VALUES(?,?,?,?)");
+      $sentencia->execute(array($IdProducto,$IdUsuario,$Comentario,$Puntaje));
+    }
+
   }
  ?>
