@@ -35,19 +35,22 @@ class LoginController
 
       if (isset($dbUser[0])) {
 
-        if($dbUser[0]["admin"] == 1){
-              if (password_verify($pass, $dbUser[0]["pass"])){
-                  //mostrar lista de productos
+        if(password_verify($pass, $dbUser[0]["pass"])){
+              if ($dbUser[0]["admin"] == 1){
                   session_start();
                   $_SESSION["User"] = $usuario;
+                  $_SESSION["UserId"] = $dbUser[0]["id_usuario"];
                   header(ADMIN);
               }
               else{
-                $this->view->mostrarLogin("Contraseña incorrecta");
+                session_start();
+                $_SESSION["User"] = $usuario;
+                $_SESSION["UserId"] = $dbUser[0]["id_usuario"];
+                header(USUARIO);
               }
         }
         else{
-            $this->view->mostrarLogin("No eres administrador");
+            $this->view->mostrarLogin("Contraseña Incorrecta");
         }
       }
       else {
@@ -58,7 +61,7 @@ class LoginController
 
   function verificarRegister(){
     if(!empty($_POST['usuarioId']) && !empty($_POST['passwordId'])){
-      $usuario = $_POST["usuarioId"];
+      $usuario = strtolower($_POST["usuarioId"]);
       $pass = password_hash($_POST["passwordId"], PASSWORD_DEFAULT);
       $dbUser = $this->model->getUser($usuario);
 

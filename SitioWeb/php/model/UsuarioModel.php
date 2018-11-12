@@ -34,6 +34,7 @@ class UsuarioModel
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
+
 }
 
  ?>

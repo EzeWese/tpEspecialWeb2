@@ -1,24 +1,28 @@
-/*'use strict'
+'use strict'
+let templateComentarios;
+
+fetch('js/templates/comentarios.handlebars')
+  .then(response => response.text())
+  .then(template => {
+    templateComentarios = Handlebars.compile(template); // compila y prepara el template
+
+    getComentarios();
+  });
 
 
-load('html/home.html');
-function load(urlPartial) {
-    fetch(urlPartial).then(
-        function (response) {
-            response.text().then(
-                function (texto) {
-                    document.querySelector('.cuerpo').innerHTML = texto;
-                }
-            )
-        }
-    )
+function getComentarios() {
+  fetch("api/comentario")
+    .then(response => response.json())
+    .then(jsonComentarios => {
+      mostrarComentarios(jsonComentarios);
+    })
 }
 
-let botones = document.querySelectorAll('.js_btn');
-botones[0].addEventListener('click', e => load('html/home.html'));
-botones[1].addEventListener('click', e => load('html/historia.html'));
-botones[2].addEventListener('click', e => load('html/mateWorld.html'));
-botones[3].addEventListener('click', e => load('php/index.php'));
-
-//Aca en "botones[3]" cambie el quiz html que llama en load, por index.php
-*/
+function mostrarComentarios(jsonComentarios) {
+  let context = { // como el assign de smarty
+    comentarios: jsonComentarios
+    //otra: "hola
+  }
+  let html = templateComentarios(context);
+  document.querySelector("#comentarios-container").innerHTML = html;
+}

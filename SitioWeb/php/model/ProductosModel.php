@@ -115,18 +115,27 @@
     function getComentario($IdComentario){
       $sentencia = $this->db->prepare("SELECT * FROM comentario WHERE id_comentario=?");
       $sentencia->execute($IdComentario);
-      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+      return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
 
     function BorrarComentario($IdComentario){
 
-      $sentencia = $this->db->prepare("DELETE FROM comentario WHERE id_comentario=?");
-      $sentencia->execute(array($IdComentario));
+      $comentario = $this->getComentario($IdComentario);
+      if (isset($comentario)) {
+        $sentencia = $this->db->prepare("DELETE FROM comentario WHERE id_comentario=?");
+        $sentencia->execute(array($IdComentario));
+        return $comentario;
+      }
+
     }
 
-    function InsertComentario($IdProducto,$IdUsuario,$Comentario,$Puntaje){
-      $sentencia = $this->db->prepare("INSERT INTO comentario(id_producto,id_usuario,comentario,puntaje) VALUES(?,?,?,?)");
-      $sentencia->execute(array($IdProducto,$IdUsuario,$Comentario,$Puntaje));
+    function InsertComentario($IdProducto,$Comentario,$Puntaje){
+      session_start();
+      $sentencia = $this->db->prepare("INSERT INTO comentario(id_producto,id_usuario,nombre,comentario,puntaje) VALUES(?,?,?,?,?)");
+      $sentencia->execute(array($IdProducto,$_SESSION["UserId"],$_SESSION["User"],$Comentario,$Puntaje));
+      $lastId = $this->db->lastInsertId();
+      $comentario = $this->getComentario($lastId);
+      return $comentario[0];
     }
 
   }

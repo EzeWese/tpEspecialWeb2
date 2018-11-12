@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-09 16:03:49
+/* Smarty version 3.1.33, created on 2018-11-10 23:21:20
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productoDetallado.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5be5a1d55f4672_82019010',
+  'unifunc' => 'content_5be759e026dd87_60999513',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4d070f4f2ef51b2f3b5471e0df6dbd0fca2716c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetallado.tpl',
-      1 => 1541775820,
+      1 => 1541789089,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5be5a1d55f4672_82019010 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5be759e026dd87_60999513 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -83,6 +83,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               <span class="sr-only">Next</span>
             </a>
         </div>
+
+        <div class="justify-content-center informaciongeneral mt-3 mb-3">
+          <h3>Comentarios</h3>
+        </div>
+        <div class="comentario">
+          //Comentarios
+        </div>
+
+
 
         <div class="botonesForm mt-3">
           <button type="submit" class="btn btn-lg btn-enviar">Volver</button>

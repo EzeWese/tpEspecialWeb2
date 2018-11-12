@@ -19,7 +19,7 @@ class Api{
        200 => "OK",
        404 => "Not found",
        500 => "Internal Server Error",
-       300 => "Task Not found"
+       300 => "Comment Not found"
      );
      return ($status[$code])? $status[$code] : $status[500];
    }

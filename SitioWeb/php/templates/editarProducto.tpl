@@ -50,6 +50,10 @@
         </ul>
       </div>
     </div>
+    <h3>Comentarios</h3>
+    <div id="comentarios-container" class="mt-3 mb-3">
+
+    </div>
   </article>
 </div>
 {include file="php/templates/footer.tpl"}

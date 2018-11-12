@@ -5,12 +5,7 @@
   RewriteRule ^[css|img|js].*$ - [L]
 
 
-	RewriteRule ^php/api/(.*)$ php/api/routeApi.php?resource=$1 [QSA,L]
-	# RewriteRule ^api/(.*)$ api/routeAdvance.php?resource=$1 [QSA,L]
-
-
+	# RewriteRule ^php/api/(.*)$ php/api/routeApi.php?resource=$1 [QSA,L]
+	RewriteRule ^api/(.*)$ api/routeApi.php?resource=$1 [QSA,L]
 	RewriteRule ^(.*)$ route.php?action=$1 [QSA,L]
-
-#  RewriteRule ^(.*)$ routeAdvance.php?action=$1 [QSA,L]
-
 </IfModule>
