@@ -1,10 +1,11 @@
 <?php
-
-class Api{
+require_once  "../php/view/LoginView.php";
+class Api extends SecuredController{
 
   protected $data;
 
   function __construct(){
+    parent::__construct();
     $this->data = file_get_contents("php://input");
   }
 
