@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2018 a las 17:04:13
+-- Tiempo de generación: 12-11-2018 a las 18:52:10
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -48,6 +48,28 @@ INSERT INTO `categoria` (`id_categoria`, `nombre`, `descripcion`) VALUES
 (6, 'Yerberas', 'Yerberas de todo tipo. Metal. Medera. Cuero.'),
 (7, 'Materas', 'Materas de todo tipo y materiales para llevar tu equipo de mate a todos lados.'),
 (8, 'Combos', 'Promociones de equipos de Mate Completos.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `id_comentario` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `comentario` varchar(300) NOT NULL,
+  `puntaje` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comentario`
+--
+
+INSERT INTO `comentario` (`id_comentario`, `id_producto`, `id_usuario`, `nombre`, `comentario`, `puntaje`) VALUES
+(1, 20, 1, 'pepe', 'buenisimo', 5);
 
 -- --------------------------------------------------------
 
@@ -134,6 +156,14 @@ ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id_categoria`);
 
 --
+-- Indices de la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`id_comentario`),
+  ADD KEY `id_producto` (`id_producto`),
+  ADD KEY `id_usuario` (`id_usuario`);
+
+--
 -- Indices de la tabla `imagen`
 --
 ALTER TABLE `imagen`
@@ -164,6 +194,12 @@ ALTER TABLE `categoria`
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT de la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `imagen`
 --
 ALTER TABLE `imagen`
@@ -184,6 +220,13 @@ ALTER TABLE `usuario`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`),
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
 
 --
 -- Filtros para la tabla `imagen`
