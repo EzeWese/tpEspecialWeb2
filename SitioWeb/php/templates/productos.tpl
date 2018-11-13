@@ -17,10 +17,13 @@
               <th scope="col">Categoria
                  <form class="row" action="filtrarPorCategoria" method="post" target="_self">
                   <div class="col">
-                  <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
+
+                  <select class="form-control respuestas" id="categoria" name="IdCategoria">
+
                     {foreach from=$Categorias item=categoria}
                       <option value="{$categoria['id_categoria']}">{$categoria['nombre']}</option>
                     {/foreach}
+                    
                   </select>
                   </div>
                   <div class="col">

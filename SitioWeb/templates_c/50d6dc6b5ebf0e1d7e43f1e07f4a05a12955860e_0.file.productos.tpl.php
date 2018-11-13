@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-10 23:21:08
+/* Smarty version 3.1.33, created on 2018-11-13 05:24:33
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5be759d43dbe26_66110038',
+  'unifunc' => 'content_5bea5201cdcc92_08525098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '50d6dc6b5ebf0e1d7e43f1e07f4a05a12955860e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1541888282,
+      1 => 1542083064,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5be759d43dbe26_66110038 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bea5201cdcc92_08525098 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -43,7 +43,9 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
               <th scope="col">Categoria
                  <form class="row" action="filtrarPorCategoria" method="post" target="_self">
                   <div class="col">
-                  <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
+
+                  <select class="form-control respuestas" id="categoria" name="IdCategoria">
+
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
 if ($_from !== null) {
@@ -56,6 +58,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    
                   </select>
                   </div>
                   <div class="col">

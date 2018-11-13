@@ -42,6 +42,7 @@ class PageController
     $IdCategoria = $_POST["IdCategoria"];
     $Productos = $this->model->getProductoPorCategoria($IdCategoria);
     $Categorias = $this->model->getCategorias();
+
     $this->view->MostrarProductos($Productos,$Categorias);
 
   }

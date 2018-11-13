@@ -31,7 +31,7 @@
      function getCategoria($IdCategoria){
       $sentencia = $this->db->prepare("SELECT * FROM categoria WHERE id_categoria=? limit 1");
       $sentencia->execute(array($IdCategoria));
-      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+      return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
 
     function getProducto($IdProducto){
@@ -112,10 +112,10 @@
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    function getComentario($IdComentario){
-      $sentencia = $this->db->prepare("SELECT * FROM comentario WHERE id_comentario=?");
-      $sentencia->execute($IdComentario);
-      return $sentencia->fetch(PDO::FETCH_ASSOC);
+    function getComentario($IdProducto){
+      $sentencia = $this->db->prepare("SELECT * FROM comentario WHERE id_producto=?");
+      $sentencia->execute(array($IdProducto));
+      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function BorrarComentario($IdComentario){

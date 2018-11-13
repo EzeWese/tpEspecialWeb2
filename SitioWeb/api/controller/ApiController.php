@@ -15,8 +15,8 @@ class ApiController extends Api{
   function getComentarios($param = null){
 
     if(isset($param)){
-        $id_comentario = $param[0];
-        $arreglo = $this->model->getComentario($id_comentario);
+        $id_producto = $param[0];
+        $arreglo = $this->model->getComentario($id_producto);
         $data = $arreglo;
 
     }else{

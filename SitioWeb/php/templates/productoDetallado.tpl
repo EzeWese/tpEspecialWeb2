@@ -44,20 +44,20 @@
             </a>
         </div>
 
-        <div class="justify-content-center informaciongeneral mt-3 mb-3">
-          <h3>Comentarios</h3>
-        </div>
-        <div class="comentario">
-          //Comentarios
+        <h3>Comentarios</h3>
+        <div id="comentarios-container" class="mt-3">
+
         </div>
 
 
 
-        <div class="botonesForm mt-3">
+        <div class="botonesForm mt-3 mb-3">
           <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
         </div>
       </form>
     </div>
   </article>
 </div>
+<script src="js/main.js"></script>
+<script src="js/handlebars-v4.0.12.js"></script>
 {include file="php/templates/footer.tpl"}

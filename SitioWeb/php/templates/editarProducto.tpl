@@ -56,4 +56,6 @@
     </div>
   </article>
 </div>
+<script src="js/main.js"></script>
+<script src="js/handlebars-v4.0.12.js"></script>
 {include file="php/templates/footer.tpl"}

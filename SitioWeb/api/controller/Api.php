@@ -1,5 +1,6 @@
 <?php
-require_once  "../php/view/LoginView.php";
+require_once  "../php/controller/SecuredController.php";
+
 class Api extends SecuredController{
 
   protected $data;

@@ -5,13 +5,14 @@ fetch('js/templates/comentarios.handlebars')
   .then(response => response.text())
   .then(template => {
     templateComentarios = Handlebars.compile(template); // compila y prepara el template
-
-    getComentarios();
+    let idProducto = document.querySelector("#IdProducto").value;
+    getComentarios(idProducto);
   });
 
 
-function getComentarios() {
-  fetch("api/comentario")
+
+function getComentarios(idProducto) {
+  fetch("api/comentario/"+idProducto)
     .then(response => response.json())
     .then(jsonComentarios => {
       mostrarComentarios(jsonComentarios);
