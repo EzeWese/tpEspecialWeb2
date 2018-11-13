@@ -1,10 +1,12 @@
 <?php
+require_once  "../php/controller/SecuredController.php";
 
-class Api{
+class ApiSecured extends SecuredController{
 
   protected $data;
 
   function __construct(){
+    parent::__construct();
     $this->data = file_get_contents("php://input");
   }
 

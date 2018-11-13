@@ -1,9 +1,9 @@
 <?php
 
-require_once "Api.php";
+require_once "ApiSecured.php";
 require_once "../php/model/ProductosModel.php";
 
-class ApiController extends Api{
+class ApiController extends ApiSecured{
   private $model;
 
   function __construct(){

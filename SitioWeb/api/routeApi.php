@@ -2,6 +2,7 @@
 
 require_once "config/ConfigApi.php";
 require_once "controller/ApiController.php";
+require_once "controller/ApiControllerSinSesion.php";
 
 function parseURL($url)
 {

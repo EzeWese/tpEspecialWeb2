@@ -5,7 +5,7 @@ class ConfigApi
     public static $RESOURCE = 'resource';
     public static $PARAMS = 'params';
     public static $RESOURCES = [
-      'comentario#GET'=> 'ApiController#getComentarios',
+      'comentario#GET'=> 'ApiControllerSinSesion#getComentarios',
       'comentario#POST'=> 'ApiController#InsertComentario'
     ];
 
