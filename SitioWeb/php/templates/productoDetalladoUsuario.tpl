@@ -44,11 +44,9 @@
             </a>
         </div>
 
-        <div class="justify-content-center informaciongeneral mt-3 mb-3">
-          <h3>Comentarios</h3>
-        </div>
-        <div class="comentario">
-          //Comentarios
+        <h3>Comentarios</h3>
+        <div id="comentarios-container" class="mt-3">
+
         </div>
 
 
@@ -60,4 +58,15 @@
     </div>
   </article>
 </div>
-{include file="php/templates/footer.tpl"}
+<footer class="container-fluid">
+  <p>Página creada por Ezequiel Wesenack y Patricio Prado para el trabajo especial de la cátedra de web2 de la carrera de
+    Tudai 2018.</p>
+</footer>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars-v4.0.12.js"></script>
+<script src="js/mainUser.js"></script>
+</body>
+
+</html>

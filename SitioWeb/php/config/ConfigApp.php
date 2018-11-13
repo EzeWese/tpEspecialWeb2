@@ -4,6 +4,8 @@ define('HOME', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["P
 define('LOGIN', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/login');
 define('LOGOUT', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/logout');
 define('ADMIN', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/admin');
+define('USUARIO', 'Location: http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]). '/user');
+
 class ConfigApp
   {
 
@@ -30,7 +32,9 @@ class ConfigApp
       'editarCategoria'=> 'ProductosController#EditarCategoria',
       'guardarCategoria'=> 'ProductosController#GuardarEditarCategoria',
       'borrarCategoria'=> 'ProductosController#BorrarCategoria',
-      'filtrarPorCategoria'=> 'PageController#filtrarPorCategoria'
+      'filtrarPorCategoria'=> 'PageController#filtrarPorCategoria',
+      'user'=> 'PageController#ProductosUsuario',
+      'detalleUser'=> 'PageController#mostrarDetalleUser'
     ];
 
 

@@ -32,12 +32,28 @@ class PageController
     $Categorias = $this->model->getCategorias();
     $this->view->MostrarProductos($Productos,$Categorias);
   }
+
+  function ProductosUsuario(){
+
+    $Productos = $this->model->getProductos();
+    $Categorias = $this->model->getCategorias();
+    $this->view->MostrarProductosUsuario($Productos,$Categorias);
+  }
+
   function mostrarDetalle($param){
     $IdProducto = $param[0];
     $Producto = $this->model->getProducto($IdProducto);
     $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
     $this->view->mostrarDetalle($Producto, $Imagenes);
   }
+
+  function mostrarDetalleUser($param){
+    $IdProducto = $param[0];
+    $Producto = $this->model->getProducto($IdProducto);
+    $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
+    $this->view->mostrarDetalleUser($Producto, $Imagenes);
+  }
+
   function filtrarPorCategoria(){
     $IdCategoria = $_POST["IdCategoria"];
     $Productos = $this->model->getProductoPorCategoria($IdCategoria);
