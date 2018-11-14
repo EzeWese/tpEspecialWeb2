@@ -54,13 +54,16 @@
     <div id="comentarios-container" class="mt-3 mb-3">
 
     </div>
-    <div class="botonesForm mt-3">
+    <div class="informaciongeneral encuesta mt-3 mb-3">
       <form method="post" action="{$home}/admin" target="_self">
+        <div class="botonesForm mt-3 ">
         <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+          </div>
       </form>
     </div>
   </article>
 </div>
+
 <footer class="container-fluid">
   <p>Página creada por Ezequiel Wesenack y Patricio Prado para el trabajo especial de la cátedra de web2 de la carrera de
     Tudai 2018.</p>

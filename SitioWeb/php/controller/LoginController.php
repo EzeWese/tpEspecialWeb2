@@ -67,7 +67,7 @@ class LoginController
 
       if(!isset($dbUser[0])){
         $this->model->InsertarUsuario($usuario,$pass);
-        $this->view->mostrarLogin("Inicie Sesion");
+        $this->verificarLogin();
       }
       else{
         $this->view->mostrarRegister("Usuario Existente");

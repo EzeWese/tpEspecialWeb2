@@ -9,8 +9,6 @@ fetch('js/templates/comentariosAdmin.handlebars')
     getComentarios(idProducto);
   });
 
-
-
 function getComentarios(idProducto) {
   fetch("api/comentario/"+idProducto)
     .then(response => response.json())
@@ -26,4 +24,37 @@ function mostrarComentarios(jsonComentarios) {
   }
   let html = templateComentarios(context);
   document.querySelector("#comentarios-container").innerHTML = html;
+  document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
+  let botonesBorrarCcomentario = document.querySelectorAll('.btn-borrarComentario');
+  botonesBorrarCcomentario.forEach(i => {
+      i.addEventListener('click', e => borrarComentario(i.value));
+    });
+}
+function borrarComentario(id){
+  let idProd = document.querySelector("#IdProducto").value;
+  fetch("api/comentario/"+id, {
+      method: 'DELETE'
+  }).then(response =>
+      getComentarios(idProd)
+  );
+}
+
+function enviarComentario() {
+  let idProd = document.querySelector("#IdProducto").value;
+      let comentario = document.querySelectorAll('.comentario');
+      let encuesta = {
+          "IdProducto": idProd,
+          "Comentario": comentario[0].value,
+          "Puntaje": comentario[1].value
+      }
+
+      fetch("api/comentario/", {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(encuesta)
+      }).then(response =>
+          getComentarios(idProd)
+      );
 }

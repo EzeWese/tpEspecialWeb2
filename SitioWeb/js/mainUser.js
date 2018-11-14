@@ -17,8 +17,6 @@ function getComentarios(idProducto) {
     })
 }
 
-document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
-
 function mostrarComentarios(jsonComentarios) {
   let context = { // como el assign de smarty
     comentarios: jsonComentarios
@@ -26,25 +24,25 @@ function mostrarComentarios(jsonComentarios) {
   }
   let html = templateComentarios(context);
   document.querySelector("#comentarios-container").innerHTML = html;
+  document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
 }
 
 function enviarComentario() {
   let idProd = document.querySelector("#IdProducto").value;
-
       let comentario = document.querySelectorAll('.comentario');
       let encuesta = {
-          "IdProducto": IdProd,
-          "preg1": comentario[0].value,
-          "preg2": comentario[1].value,
+          "IdProducto": idProd,
+          "Comentario": comentario[0].value,
+          "Puntaje": comentario[1].value
       }
 
-      fetch("api/comentario", {
+      fetch("api/comentario/", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify(objeto)
+          body: JSON.stringify(encuesta)
       }).then(response =>
-          getComentarios(IdProd)
+          getComentarios(idProd)
       );
 }

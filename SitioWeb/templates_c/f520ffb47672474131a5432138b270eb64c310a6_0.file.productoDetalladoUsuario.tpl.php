@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 19:29:00
+/* Smarty version 3.1.33, created on 2018-11-14 20:28:35
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productoDetalladoUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bec696c0ca1f4_90882969',
+  'unifunc' => 'content_5bec7763dc2472_41918163',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f520ffb47672474131a5432138b270eb64c310a6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetalladoUsuario.tpl',
-      1 => 1542220134,
+      1 => 1542223707,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bec696c0ca1f4_90882969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec7763dc2472_41918163 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -83,17 +83,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </a>
         </div>
 
+      </form>
+
         <h3>Comentarios</h3>
+
         <div id="comentarios-container" class="mt-3">
 
         </div>
-
-
-
-        <div class="botonesForm mt-3">
-          <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+        <div class="informaciongeneral encuesta mt-3 mb-3">
+          <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/admin" target="_self">
+            <div class="botonesForm mt-3 ">
+            <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+              </div>
+          </form>
         </div>
-      </form>
+
+
+
+
     </div>
   </article>
 </div>
