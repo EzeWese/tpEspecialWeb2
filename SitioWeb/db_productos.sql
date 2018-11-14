@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2018 a las 18:52:10
+-- Tiempo de generación: 14-11-2018 a las 18:35:24
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -69,7 +69,9 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`id_comentario`, `id_producto`, `id_usuario`, `nombre`, `comentario`, `puntaje`) VALUES
-(1, 20, 1, 'pepe', 'buenisimo', 5);
+(1, 20, 1, 'pepe', 'buenisimo', 5),
+(2, 16, 1, 'pepe', 'excelente yerberaaaaa!!!!', 4),
+(3, 20, 3, 'pepo', 'lejor el mejor termo del mundo!', 5);
 
 -- --------------------------------------------------------
 
@@ -143,7 +145,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `admin`, `nombre`, `pass`) VALUES
 (1, 1, 'pepe', '$2y$10$si8oRTDUH5OhitHUNjmMi.TkFmnaQ5fJGITzoFqNyIeLwkiQVA.wG'),
-(3, 1, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
+(3, 0, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
 
 --
 -- Índices para tablas volcadas
@@ -197,7 +199,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `imagen`
