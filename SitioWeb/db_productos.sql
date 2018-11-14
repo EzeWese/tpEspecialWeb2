@@ -143,7 +143,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `admin`, `nombre`, `pass`) VALUES
 (1, 1, 'pepe', '$2y$10$si8oRTDUH5OhitHUNjmMi.TkFmnaQ5fJGITzoFqNyIeLwkiQVA.wG'),
-(3, 1, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
+(3, 0, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
 
 --
 -- Índices para tablas volcadas

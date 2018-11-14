@@ -1,28 +1,27 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-12 21:13:59
+/* Smarty version 3.1.33, created on 2018-11-14 19:28:24
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\editarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5be9df07157ef3_36286754',
+  'unifunc' => 'content_5bec6948793058_28234290',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8666231227ab2b03ceb5229494276fcf30702cb3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\editarProducto.tpl',
-      1 => 1542053550,
+      1 => 1542220090,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:php/templates/header.tpl' => 1,
-    'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5be9df07157ef3_36286754 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec6948793058_28234290 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -105,8 +104,35 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <div id="comentarios-container" class="mt-3 mb-3">
 
     </div>
+    <div class="botonesForm mt-3">
+      <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/admin" target="_self">
+        <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+      </form>
+    </div>
   </article>
 </div>
-<?php $_smarty_tpl->_subTemplateRender("file:php/templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-}
+<footer class="container-fluid">
+  <p>Página creada por Ezequiel Wesenack y Patricio Prado para el trabajo especial de la cátedra de web2 de la carrera de
+    Tudai 2018.</p>
+</footer>
+<?php echo '<script'; ?>
+ src="js/jquery-3.3.1.slim.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/popper.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/handlebars-v4.0.12.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/mainAdmin.js"><?php echo '</script'; ?>
+>
+</body>
+
+</html>
+<?php }
 }

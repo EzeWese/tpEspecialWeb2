@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-13 05:24:33
-  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
+/* Smarty version 3.1.33, created on 2018-11-14 19:24:27
+  from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productosUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bea5201cdcc92_08525098',
+  'unifunc' => 'content_5bec685b154067_92555416',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '50d6dc6b5ebf0e1d7e43f1e07f4a05a12955860e' => 
+    '6794fb2ac1018b771ff0e64035457fe71fbb3b7d' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1542083064,
+      0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosUsuario.tpl',
+      1 => 1542218938,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bea5201cdcc92_08525098 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec685b154067_92555416 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -43,9 +43,7 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
               <th scope="col">Categoria
                  <form class="row" action="filtrarPorCategoria" method="post" target="_self">
                   <div class="col">
-
-                  <select class="form-control respuestas" id="categoria" name="IdCategoria">
-
+                  <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
 if ($_from !== null) {
@@ -58,7 +56,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                    
                   </select>
                   </div>
                   <div class="col">
@@ -87,7 +84,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
 </td>
                   <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
 </td>
-                  <td><a type="button"class="btn btn-enviar"href="detalle/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+                  <td><a type="button"class="btn btn-enviar"href="detalleUser/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
 " target="_self">Detalles</a></td>
                 </tr>
 
@@ -101,15 +98,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </table>
         </div>
       </div>
-      <div class="informaciongeneral mt-3">
-        <h2>Administrador</h2>
-      </div>
       <div class="informaciongeneral encuesta row mb-3">
-          <form method="post" action="login" target="_self">
-            <div class="botonesForm ml-3">
-              <button type="submit" class="btn btn-lg btn-enviar">Login</button>
-            </div>
-          </form>
+        <form action="post" method="logout" target="_self">
+          <div class="botonesForm mt-3">
+            <button type="submit" class="btn btn-lg btn-enviar">Cerrar sesion</button>
+          </div>
+        </form>
       </div>
     </article>
   </div>

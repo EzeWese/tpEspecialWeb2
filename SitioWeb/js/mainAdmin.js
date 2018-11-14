@@ -1,7 +1,7 @@
 'use strict'
 let templateComentarios;
 
-fetch('js/templates/comentarios.handlebars')
+fetch('js/templates/comentariosAdmin.handlebars')
   .then(response => response.text())
   .then(template => {
     templateComentarios = Handlebars.compile(template); // compila y prepara el template

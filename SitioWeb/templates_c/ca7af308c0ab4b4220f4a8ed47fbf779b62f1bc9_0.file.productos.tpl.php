@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-12 21:12:54
+/* Smarty version 3.1.33, created on 2018-11-14 19:22:25
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5be9dec681de32_98580355',
+  'unifunc' => 'content_5bec67e127d0e4_78490544',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca7af308c0ab4b4220f4a8ed47fbf779b62f1bc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1542053550,
+      1 => 1542219093,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5be9dec681de32_98580355 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec67e127d0e4_78490544 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
   <div class="row justify-content-center">
@@ -43,7 +43,9 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
               <th scope="col">Categoria
                  <form class="row" action="filtrarPorCategoria" method="post" target="_self">
                   <div class="col">
-                  <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
+
+                  <select class="form-control respuestas" id="categoria" name="IdCategoria">
+
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
 if ($_from !== null) {
@@ -56,6 +58,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
                   </select>
                   </div>
                   <div class="col">
@@ -99,7 +102,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
       </div>
       <div class="informaciongeneral mt-3">
-        <h2>Administrador</h2>
+        <h2>Usuario</h2>
       </div>
       <div class="informaciongeneral encuesta row mb-3">
           <form method="post" action="login" target="_self">
@@ -107,6 +110,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               <button type="submit" class="btn btn-lg btn-enviar">Login</button>
             </div>
           </form>
+          <div class="informaciongeneral encuesta row mb-3">
+              <form method="post" action="register" target="_self">
+                <div class="botonesForm ml-3">
+                  <button type="submit" class="btn btn-lg btn-enviar">Registrarse</button>
+                </div>
+              </form>
       </div>
     </article>
   </div>

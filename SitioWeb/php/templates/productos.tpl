@@ -23,7 +23,7 @@
                     {foreach from=$Categorias item=categoria}
                       <option value="{$categoria['id_categoria']}">{$categoria['nombre']}</option>
                     {/foreach}
-                    
+
                   </select>
                   </div>
                   <div class="col">
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="informaciongeneral mt-3">
-        <h2>Administrador</h2>
+        <h2>Usuario</h2>
       </div>
       <div class="informaciongeneral encuesta row mb-3">
           <form method="post" action="login" target="_self">
@@ -64,6 +64,12 @@
               <button type="submit" class="btn btn-lg btn-enviar">Login</button>
             </div>
           </form>
+          <div class="informaciongeneral encuesta row mb-3">
+              <form method="post" action="register" target="_self">
+                <div class="botonesForm ml-3">
+                  <button type="submit" class="btn btn-lg btn-enviar">Registrarse</button>
+                </div>
+              </form>
       </div>
     </article>
   </div>

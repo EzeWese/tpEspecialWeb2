@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-13 21:50:48
-  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productoDetalladoUsuario.tpl' */
+/* Smarty version 3.1.33, created on 2018-11-14 19:29:00
+  from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productoDetalladoUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beb39283dcd17_86211876',
+  'unifunc' => 'content_5bec696c0ca1f4_90882969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd514079b38d0ccac5d6458892b4dec7bcdd81123' => 
+    'f520ffb47672474131a5432138b270eb64c310a6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetalladoUsuario.tpl',
-      1 => 1542142224,
+      0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetalladoUsuario.tpl',
+      1 => 1542220134,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5beb39283dcd17_86211876 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec696c0ca1f4_90882969 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
     </div>
     <div class="justify-content-center informaciongeneral encuesta">
       <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
-/productos" target="_self">
+/user" target="_self">
         <input type="hidden" class="form-control" id="IdProducto" name="IdProducto" value="<?php echo $_smarty_tpl->tpl_vars['Producto']->value['id_producto'];?>
 " required>
         <div class="form-group">

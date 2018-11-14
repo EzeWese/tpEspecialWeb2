@@ -54,6 +54,11 @@
     <div id="comentarios-container" class="mt-3 mb-3">
 
     </div>
+    <div class="botonesForm mt-3">
+      <form method="post" action="{$home}/admin" target="_self">
+        <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+      </form>
+    </div>
   </article>
 </div>
 <footer class="container-fluid">

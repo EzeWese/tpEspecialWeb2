@@ -5,7 +5,7 @@
       <h2>Producto</h2>
     </div>
     <div class="justify-content-center informaciongeneral encuesta">
-      <form method="post" action="{$home}/productos" target="_self">
+      <form method="post" action="{$home}/user" target="_self">
         <input type="hidden" class="form-control" id="IdProducto" name="IdProducto" value="{$Producto['id_producto']}" required>
         <div class="form-group">
           <label for="nombreProducto">Nombre de Producto</label>
