@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 20:27:50
+/* Smarty version 3.1.33, created on 2018-11-14 23:33:53
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\editarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bec77361dde38_27178676',
+  'unifunc' => 'content_5beca2d14cda31_82101745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8666231227ab2b03ceb5229494276fcf30702cb3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\editarProducto.tpl',
-      1 => 1542223652,
+      1 => 1542234831,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bec77361dde38_27178676 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5beca2d14cda31_82101745 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -84,20 +84,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <h3>Imágenes</h3>
       </div>
       <div class="mb-3">
-        <ul class="list-group">
+
           <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Imagenes']->value, 'imagen');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->value) {
 ?>
-          <li class="list-group-item d-flex justify-content-between align-items-center"><?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
-  <span class="badge badge-primary badge-pill"><a href="borrarImagen/<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_imagen'];?>
-">Borrar</a></span></li>
+          <form method="POST" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/borrarImagen"  target="_self">
+          <input type="text" name="id_imagen" value="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_imagen'];?>
+" hidden><?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+
+
+          <button type="submit">Borrar</button>
+          </form>
           <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        </ul>
+
       </div>
     </div>
     <h3>Comentarios</h3>

@@ -90,6 +90,10 @@ class ProductosController extends SecuredController
     $this->model->CrearCategoria($nombreCategoria,$descripcionCategoria);
     header(ADMIN);
   }
+  function borrarImagen($param){
+    $this->model->borrarImagen($param[0]);
+    header(ADMIN);
+  }
 
 }
 

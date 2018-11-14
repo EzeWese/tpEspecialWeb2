@@ -83,6 +83,12 @@
       $sentencia->execute(array($IdCategoria));
     }
 
+    function borrarImagen($IdImagen){
+      $sentencia = $this->db->prepare("DELETE FROM imagen WHERE id_imagen=?");
+      $sentencia->execute(array($IdImagen));
+    }
+
+
 
     function EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto,$tempPaths){
       $arrcategoria = $this->getCategoria($IdCategoria);

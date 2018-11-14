@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 20:28:35
+/* Smarty version 3.1.33, created on 2018-11-14 22:36:22
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productoDetalladoUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bec7763dc2472_41918163',
+  'unifunc' => 'content_5bec95564ddac2_47030582',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f520ffb47672474131a5432138b270eb64c310a6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetalladoUsuario.tpl',
-      1 => 1542223707,
+      1 => 1542231381,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bec7763dc2472_41918163 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec95564ddac2_47030582 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -57,22 +57,29 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
         <div class="justify-content-center informaciongeneral mt-3 mb-3">
           <h3>Imágenes</h3>
         </div>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <?php
+      </form>
+      <div class="row justify-content-center mt-4">
+        <div class="galeriaporelmundo col-8 mb-4">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner ">
+              <div class="carousel-item active imgporelmundo">
+                <img class="d-block w-100" src="imagenes/mate.png" alt="FOTOS DEL PRODUCTO">
+              </div>
+              <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Imagenes']->value, 'imagen');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->value) {
 ?>
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="php/<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+                <div class="carousel-item  imgporelmundo">
+                  <img class="d-block w-100" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
 " alt="">
-              </div>
-            <?php
+                </div>
+              <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-          </div>
+            </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -81,9 +88,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+          </div>
         </div>
+      </div>
 
-      </form>
+
+
 
         <h3>Comentarios</h3>
 

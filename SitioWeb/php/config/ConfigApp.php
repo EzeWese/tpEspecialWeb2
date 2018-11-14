@@ -34,11 +34,12 @@ class ConfigApp
       'borrarCategoria'=> 'ProductosController#BorrarCategoria',
       'filtrarPorCategoria'=> 'PageController#filtrarPorCategoria',
       'user'=> 'PageController#ProductosUsuario',
-      'detalleUser'=> 'PageController#mostrarDetalleUser'
+      'detalleUser'=> 'PageController#mostrarDetalleUser',
+      'borrarImagen'=> 'ProductosController#borrarImagen'
+
     ];
 
-
-
+    
   }
 
 
