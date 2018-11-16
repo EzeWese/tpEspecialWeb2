@@ -161,6 +161,7 @@
             {/if}
             <td>
               {if $usuario['admin'] eq 1}
+              Ya es admin
               {else}
               <a type="button" class="btn btn-enviar " href="darPermiso/{$usuario['id_usuario']}" target="_self">Dar Permiso</a>
               {/if}

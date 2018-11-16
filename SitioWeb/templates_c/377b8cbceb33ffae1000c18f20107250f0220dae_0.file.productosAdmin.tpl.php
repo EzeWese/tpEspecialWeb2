@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 16:31:41
+/* Smarty version 3.1.33, created on 2018-11-16 17:44:27
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beee2dd3dca31_77186494',
+  'unifunc' => 'content_5beef3ebc68914_91537359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '377b8cbceb33ffae1000c18f20107250f0220dae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1542382292,
+      1 => 1542386663,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5beee2dd3dca31_77186494 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5beef3ebc68914_91537359 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center margenPagina">
@@ -226,6 +226,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
             <?php }?>
             <td>
               <?php if ($_smarty_tpl->tpl_vars['usuario']->value['admin'] == 1) {?>
+              Ya es admin
               <?php } else { ?>
               <a type="button" class="btn btn-enviar " href="darPermiso/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 " target="_self">Dar Permiso</a>
