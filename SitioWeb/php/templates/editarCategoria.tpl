@@ -1,5 +1,5 @@
 {include file="php/templates/header.tpl"}
-<div class="row justify-content-center">
+<div class="row justify-content-center margenPagina">
   <article class="principal col-12 col-md-10">
     <div class="justify-content-center informaciongeneral mt-3">
       <h2>Editar Categoria</h2>

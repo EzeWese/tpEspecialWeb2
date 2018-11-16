@@ -53,7 +53,7 @@
 
     function InsertarProducto($IdCategoria,$nombre,$precio,$descripcion,$tempPaths){
       $arrcategoria = $this->getCategoria($IdCategoria);
-      $categoria = $arrcategoria[0]["nombre"];
+      $categoria = $arrcategoria["nombre"];
 
       $sentencia = $this->db->prepare("INSERT INTO producto(id_categoria, nombre, categoria, precio, descripcion) VALUES(?,?,?,?,?)");
       $sentencia->execute(array($IdCategoria,$nombre,$categoria,$precio,$descripcion));
@@ -88,11 +88,9 @@
       $sentencia->execute(array($IdImagen));
     }
 
-
-
     function EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto,$tempPaths){
       $arrcategoria = $this->getCategoria($IdCategoria);
-      $categoria = $arrcategoria[0]["nombre"];
+      $categoria = $arrcategoria["nombre"];
 
       $sentencia = $this->db->prepare("UPDATE producto SET id_categoria = ?, nombre = ?, categoria = ?, precio = ?, descripcion = ? WHERE id_producto=?");
       $sentencia->execute(array($IdCategoria,$nombre,$categoria,$precio,$descripcion,$IdProducto));

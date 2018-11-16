@@ -24,6 +24,13 @@ class ProductosController extends SecuredController
     $this->view->MostrarProductosAdmin($Productos,$Categorias);
   }
 
+  function ProductosUsuario(){
+
+    $Productos = $this->model->getProductos();
+    $Categorias = $this->model->getCategorias();
+    $this->view->MostrarProductosUsuario($Productos,$Categorias);
+  }
+
   function InsertProducto(){
       $nombre = $_POST["nombreProducto"];
       $descripcion = $_POST["descripcion"];
@@ -49,8 +56,15 @@ class ProductosController extends SecuredController
     $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
     $this->view->MostrarEditarProducto($Producto,$Categorias,$Imagenes);
 
-
   }
+
+  function mostrarDetalleUser($param){
+    $IdProducto = $param[0];
+    $Producto = $this->model->getProducto($IdProducto);
+    $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
+    $this->view->mostrarDetalleUser($Producto, $Imagenes);
+  }
+
   function EditarCategoria($param){
     $IdCategoria = $param[0];
     $Categoria = $this->model->getCategoria($IdCategoria);
@@ -85,14 +99,16 @@ class ProductosController extends SecuredController
   }
 
   function InsertCategoria(){
-    $nombreCategoria=$_POST["nuevaCategoria"];
-    $descripcionCategoria=$_POST["descripcionNuevaCategoria"];
+    $nombreCategoria = $_POST["nuevaCategoria"];
+    $descripcionCategoria = $_POST["descripcionNuevaCategoria"];
     $this->model->CrearCategoria($nombreCategoria,$descripcionCategoria);
     header(ADMIN);
   }
-  function borrarImagen($param){
-    $this->model->borrarImagen($param[0]);
-    header(ADMIN);
+  function borrarImagen(){
+    $idImagen = $_POST["IdImagen"];
+    $IdProducto = $_POST["IdImagenProducto"];
+    $this->model->borrarImagen($idImagen);
+    header(EDITAR . '/' . $IdProducto);
   }
 
 }

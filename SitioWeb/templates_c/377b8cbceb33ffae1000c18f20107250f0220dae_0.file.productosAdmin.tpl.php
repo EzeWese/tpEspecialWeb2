@@ -1,10 +1,37 @@
-{include file="php/templates/header.tpl"}
+<?php
+/* Smarty version 3.1.33, created on 2018-11-16 06:11:52
+  from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bee5198bf6d35_56174733',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '377b8cbceb33ffae1000c18f20107250f0220dae' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
+      1 => 1542344312,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:php/templates/header.tpl' => 1,
+    'file:php/templates/footer.tpl' => 1,
+  ),
+),false)) {
+function content_5bee5198bf6d35_56174733 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 <div class="row justify-content-center margenPagina">
   <article class="principal col-12 col-md-10">
     <h1 class="text-center mt-3 mb-4">Administrador</h1>
     <div class="informaciongeneral encuesta row mt-3 mb-4">
       <div class="ml-4">
-        <h2>{$User}</h2>
+        <h2><?php echo $_smarty_tpl->tpl_vars['User']->value;?>
+</h2>
       </div>
       <div class="">
         <form method="post" action="logout" target="_self">
@@ -38,11 +65,20 @@
           <label for="categoria">Categoria*</label>
           <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
 
-            {foreach from=$Categorias item=categoria}
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
+?>
 
-            <option value="{$categoria['id_categoria']}">{$categoria['nombre']}</option>
+            <option value="<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+"><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
+</option>
 
-            {/foreach}
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
           </select>
         </div>
@@ -95,18 +131,31 @@
             </tr>
           </thead>
           <tbody class="tabla-opiniones">
-            {foreach from=$Productos item=producto}
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Productos']->value, 'producto');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
+?>
 
             <tr class="btn-centrado">
-              <td>{$producto['nombre']}</td>
-              <td>{$producto['descripcion']}</td>
-              <td>{$producto['categoria']}</td>
-              <td>{$producto['precio']}</td>
-              <td><a type="button" class="btn btn-enviar" href="borrar/{$producto['id_producto']}" target="_self">BORRAR</a></td>
-              <td><a type="button" class="btn btn-enviar" href="editar/{$producto['id_producto']}" target="_self">EDITAR</a></td>
+              <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['nombre'];?>
+</td>
+              <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['descripcion'];?>
+</td>
+              <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['categoria'];?>
+</td>
+              <td><?php echo $_smarty_tpl->tpl_vars['producto']->value['precio'];?>
+</td>
+              <td><a type="button" class="btn btn-enviar" href="borrar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+" target="_self">BORRAR</a></td>
+              <td><a type="button" class="btn btn-enviar" href="editar/<?php echo $_smarty_tpl->tpl_vars['producto']->value['id_producto'];?>
+" target="_self">EDITAR</a></td>
             </tr>
 
-            {/foreach}
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
           </tbody>
@@ -121,17 +170,29 @@
             <th scope="col">Borrar</th>
             <th scope="col">Editar</th>
         <tbody class="tabla-opiniones">
-          {foreach from=$Categorias item=categoria}
+          <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
+?>
           <tr class="btn-centrado">
-            <td>{$categoria['nombre']}</td>
-            <td><a type="button" class="btn btn-enviar" href="borrarCategoria/{$categoria['id_categoria']}" target="_self">Borrar Categoria</a></td>
-            <td><a type="button" class="btn btn-enviar " href="editarCategoria/{$categoria['id_categoria']}" target="_self">Editar Categoria</a></td>
+            <td><?php echo $_smarty_tpl->tpl_vars['categoria']->value['nombre'];?>
+</td>
+            <td><a type="button" class="btn btn-enviar" href="borrarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+" target="_self">Borrar Categoria</a></td>
+            <td><a type="button" class="btn btn-enviar " href="editarCategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value['id_categoria'];?>
+" target="_self">Editar Categoria</a></td>
           </tr>
-          {/foreach}
+          <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </tbody>
       </table>
 
     </div>
   </article>
 </div>
-{include file="php/templates/footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:php/templates/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

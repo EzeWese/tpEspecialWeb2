@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2018 a las 18:52:10
+-- Tiempo de generación: 16-11-2018 a las 07:42:36
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -69,7 +69,11 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`id_comentario`, `id_producto`, `id_usuario`, `nombre`, `comentario`, `puntaje`) VALUES
-(1, 20, 1, 'pepe', 'buenisimo', 5);
+(1, 20, 1, 'pepe', 'buenisimo', 5),
+(2, 20, 1, 'pepe', 'me arrepenti, ojo no lo compres', 3),
+(3, 20, 1, 'pepe', 'termo piolaso', 5),
+(4, 18, 3, 'pepo', 'excelente termo!', 5),
+(5, 18, 3, 'pepo', 'si haganme caso', 5);
 
 -- --------------------------------------------------------
 
@@ -88,8 +92,18 @@ CREATE TABLE `imagen` (
 --
 
 INSERT INTO `imagen` (`id_imagen`, `id_producto`, `url`) VALUES
-(9, 20, 'images/5be27b3eea797.jpg'),
-(10, 20, 'images/5be27b3eecbcf.jpg');
+(25, 13, 'images/5bee6107cbbd5.jpg'),
+(26, 14, 'images/5bee617f6c448.jpg'),
+(27, 22, 'images/5bee61e29ca59.jpg'),
+(28, 22, 'images/5bee61e29f518.jpg'),
+(29, 21, 'images/5bee61efd53b9.jpg'),
+(30, 17, 'images/5bee62032186f.jpg'),
+(31, 18, 'images/5bee6225a2d81.jpg'),
+(32, 12, 'images/5bee63d75d59e.jpg'),
+(33, 15, 'images/5bee6411732ac.jpg'),
+(34, 19, 'images/5bee646396fe0.jpg'),
+(35, 20, 'images/5bee64e51e311.jpg'),
+(36, 16, 'images/5bee6566f1178.jpg');
 
 -- --------------------------------------------------------
 
@@ -112,7 +126,7 @@ CREATE TABLE `producto` (
 
 INSERT INTO `producto` (`id_producto`, `id_categoria`, `nombre`, `categoria`, `precio`, `descripcion`) VALUES
 (12, 4, 'Mate - Alpaca Galloneada tres patas', 'Mates', 1050, 'Mate de calabaza, alpaca cincelada en base y boquilla con tres patas. También color al natural.'),
-(13, 4, 'Mate - Boquilla Galloneada', 'Mates', 960, 'Mate de calabaza, alpaca cincelada en la boquilla.'),
+(13, 4, 'MATE - CUERO CRUDO', 'Mates', 960, 'Mate de cuero a tres costuras. '),
 (14, 4, 'Mate - Alpaca trabajada', 'Mates', 760, 'Mate de calabaza, alpaca cincelada en base y boquilla.'),
 (15, 4, 'Mate Base', 'Mates', 912, 'MATE BASE Y VIROLA TEJIDO MEDIO FINO'),
 (16, 6, 'Yerbera chica de lona', 'Yerberas', 441, 'YERBERA REDONDA CHICA FORRADA EN LONA ENVEJECIDA'),
@@ -197,13 +211,13 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `imagen`
 --
 ALTER TABLE `imagen`
-  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`

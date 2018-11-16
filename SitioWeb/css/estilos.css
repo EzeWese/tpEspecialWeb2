@@ -84,8 +84,8 @@ article {
 }
 
 h2 {
-  color: #388B2F;
-  font-weight: normal;
+  color: black;
+  font-weight: 600;
 }
 
 .imagenlogo {
@@ -201,4 +201,22 @@ th, td, tr {
 
 a {
   color: black;
+}
+
+.list-group-item.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-color: black;
+}
+
+.imagenProducto {
+  margin-left: 12rem!important;
+  margin-right: 12rem!important;
+}
+
+.margenPagina {
+  margin-left: 8rem!important;
+  margin-right: 8rem!important;
 }

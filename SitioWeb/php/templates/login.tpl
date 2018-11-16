@@ -2,7 +2,6 @@
 <div class="row justify-content-center">
   <article class="principal col-12 col-md-10">
     <div class="justify-content-center informaciongeneral mt-3">
-      <h2>Administrador</h2>
       <h3>Iniciar Sesion</h3>
     </div>
     <div class="informaciongeneral encuesta mb-3">

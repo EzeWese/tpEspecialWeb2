@@ -33,15 +33,6 @@ require('php/libs/Smarty.class.php');
       $this->Smarty->display('php/templates/productos.tpl');
     }
 
-    function MostrarProductosUsuario($Productos,$Categorias) {
-      $this->Smarty->assign('home','http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
-      //$this->Smarty->assign('Titulo',$Titulo); // El 'Titulo' del assign puede ser cualquier valor
-      $this->Smarty->assign('Productos',$Productos);
-      $this->Smarty->assign('Categorias',$Categorias);
-      //$smarty->debugging = true;
-      $this->Smarty->display('php/templates/productosUsuario.tpl');
-    }
-
     function mostrarDetalle($Producto, $Imagenes){
       $this->Smarty->assign('Producto',$Producto);
       $this->Smarty->assign('Imagenes',$Imagenes);
@@ -50,13 +41,6 @@ require('php/libs/Smarty.class.php');
 
     }
 
-    function mostrarDetalleUser($Producto, $Imagenes){
-      $this->Smarty->assign('Producto',$Producto);
-      $this->Smarty->assign('Imagenes',$Imagenes);
-      $this->Smarty->assign('home','http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
-      $this->Smarty->display('php/templates/productoDetalladoUsuario.tpl');
-
-    }
   }
 
 ?>
