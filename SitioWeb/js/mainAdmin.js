@@ -1,5 +1,6 @@
 'use strict'
 let templateComentarios;
+document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
 
 fetch('js/templates/comentariosAdmin.handlebars')
   .then(response => response.text())
@@ -7,7 +8,7 @@ fetch('js/templates/comentariosAdmin.handlebars')
     templateComentarios = Handlebars.compile(template); // compila y prepara el template
     let idProducto = document.querySelector("#IdProducto").value;
     getComentarios(idProducto);
-    timer = setInterval(function () { getComentarios(idProducto); }, 2000);
+    let timer = setInterval(function () { getComentarios(idProducto); }, 2000);
   });
 
 function getComentarios(idProducto) {
@@ -25,7 +26,6 @@ function mostrarComentarios(jsonComentarios) {
   }
   let html = templateComentarios(context);
   document.querySelector("#comentarios-container").innerHTML = html;
-  document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
   let botonesBorrarCcomentario = document.querySelectorAll('.btn-borrarComentario');
   botonesBorrarCcomentario.forEach(i => {
       i.addEventListener('click', e => borrarComentario(i.value));

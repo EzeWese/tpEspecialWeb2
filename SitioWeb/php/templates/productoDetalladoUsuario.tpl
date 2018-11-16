@@ -61,6 +61,24 @@
       <div id="comentarios-container" class="mt-3">
 
       </div>
+      <div class="mt-3">
+    <h3>Nuevo Comentario</h3>
+    <div class="informaciongeneral encuesta mt-3 mb-3">
+      <form method="" action="" target="_self">
+        <div class="form-group">
+          <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="puntaje">Puntaje</label>
+          <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
+        </div>
+      </form>
+      <div class="botonesForm mt-3">
+        <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
+      </div>
+      </div>
+
+  </div>
       <div class="informaciongeneral encuesta mt-3 mb-3">
         <form method="post" action="{$home}/user" target="_self">
           <div class="botonesForm mt-3 ">

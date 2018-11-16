@@ -1,7 +1,8 @@
 'use strict'
 let templateComentarios;
 
-fetch('js/templates/comentariosUser.handlebars')
+document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
+fetch('js/templates/comentarios.handlebars')
   .then(response => response.text())
   .then(template => {
     templateComentarios = Handlebars.compile(template); // compila y prepara el template
@@ -25,7 +26,6 @@ function mostrarComentarios(jsonComentarios) {
   }
   let html = templateComentarios(context);
   document.querySelector("#comentarios-container").innerHTML = html;
-  document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
 }
 
 function enviarComentario() {
