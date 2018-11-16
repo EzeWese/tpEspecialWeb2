@@ -62,6 +62,17 @@
 
     }
 
+    function BorrarComentariosUsuario($idUsuario){
+
+      $sentencia = $this->db->prepare("DELETE FROM comentario WHERE id_usuario=?");
+      $sentencia->execute(array($idUsuario));
+    }
+
+    function hacerAdmin($idUsuario){
+      $sentencia = $this->db->prepare("UPDATE usuario SET admin = 1 WHERE id_usuario=?");
+      $sentencia->execute(array($idUsuario));
+    }
+
     private function subirImagenes($tempPaths, $idProducto){
       foreach ($tempPaths as $path) {
         $destino_final = 'images/' . uniqid() . '.jpg';

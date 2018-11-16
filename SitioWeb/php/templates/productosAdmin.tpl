@@ -120,6 +120,7 @@
             <th scope="col">Categorias</th>
             <th scope="col">Borrar</th>
             <th scope="col">Editar</th>
+        </thead>
         <tbody class="tabla-opiniones">
           {foreach from=$Categorias item=categoria}
           <tr class="btn-centrado">
@@ -131,6 +132,43 @@
         </tbody>
       </table>
 
+
+    </div>
+    <div class="col-12">
+      <table class="table mb-3 mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Usuario</th>
+            <th scope="col">Tipo de Usuario</th>
+            <th scope="col">Borrar</th>
+            <th scope="col">Hacer admin</th>
+        </thead>
+        <tbody class="tabla-opiniones">
+          {foreach from=$Usuarios item=usuario}
+          <tr class="btn-centrado">
+            <td>{$usuario['nombre']}</td>
+            <td>
+              {if $usuario['admin'] eq 1}
+              Admin
+              {else}
+              Usuario
+              {/if}
+            </td>
+            <td>
+            {if $usuario['id_usuario'] neq $UserId}
+              <a type="button" class="btn btn-enviar" href="borrarUsuario/{$usuario['id_usuario']}" target="_self">Borrar Usuario</a>
+            </td>
+            {/if}
+            <td>
+              {if $usuario['admin'] eq 1}
+              {else}
+              <a type="button" class="btn btn-enviar " href="darPermiso/{$usuario['id_usuario']}" target="_self">Dar Permiso</a>
+              {/if}
+            </td>
+          </tr>
+          {/foreach}
+        </tbody>
+      </table>
     </div>
   </article>
 </div>

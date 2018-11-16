@@ -7,6 +7,7 @@ fetch('js/templates/comentarios.handlebars')
     templateComentarios = Handlebars.compile(template); // compila y prepara el template
     let idProducto = document.querySelector("#IdProducto").value;
     getComentarios(idProducto);
+    timer = setInterval(function () { getComentarios(idProducto); }, 2000);
   });
 
 

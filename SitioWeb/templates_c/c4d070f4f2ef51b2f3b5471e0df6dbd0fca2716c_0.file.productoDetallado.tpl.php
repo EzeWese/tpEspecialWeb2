@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 06:56:09
+/* Smarty version 3.1.33, created on 2018-11-16 17:37:17
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productoDetallado.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bee5bf9406d11_43479339',
+  'unifunc' => 'content_5beef23df296a8_14292576',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4d070f4f2ef51b2f3b5471e0df6dbd0fca2716c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetallado.tpl',
-      1 => 1542347762,
+      1 => 1542386230,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bee5bf9406d11_43479339 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5beef23df296a8_14292576 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center margenPagina">
@@ -60,11 +60,11 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
       </div>
       <div class="row justify-content-center mt-4">
         <div class="galeriaporelmundo col-8 mb-4">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
 
             <div class="carousel-inner ">
               <div class="carousel-item active imgporelmundo">
-                <img class="d-block w-100" src="imagenes/mate.png" alt="FOTOS DEL PRODUCTO">
+                <img class="d-block w-100" height="50" src="imagenes/mate.png" alt="FOTOS DEL PRODUCTO">
               </div>
               <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Imagenes']->value, 'imagen');

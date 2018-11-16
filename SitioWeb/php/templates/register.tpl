@@ -2,7 +2,7 @@
 <div class="row justify-content-center">
   <article class="principal col-12 col-md-10">
     <div class="justify-content-center informaciongeneral mt-3">
-      <h2>Nuevo Administrador</h2>
+      <h2>Nuevo Usuario</h2>
     </div>
     <div class="informaciongeneral encuesta mt-3">
       <form method="post" action="verificarRegister" target="_self">

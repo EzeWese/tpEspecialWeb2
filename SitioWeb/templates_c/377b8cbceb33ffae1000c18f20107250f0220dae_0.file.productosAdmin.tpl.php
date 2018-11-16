@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 06:11:52
+/* Smarty version 3.1.33, created on 2018-11-16 16:31:41
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bee5198bf6d35_56174733',
+  'unifunc' => 'content_5beee2dd3dca31_77186494',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '377b8cbceb33ffae1000c18f20107250f0220dae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1542344312,
+      1 => 1542382292,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bee5198bf6d35_56174733 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5beee2dd3dca31_77186494 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center margenPagina">
@@ -169,6 +169,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <th scope="col">Categorias</th>
             <th scope="col">Borrar</th>
             <th scope="col">Editar</th>
+        </thead>
         <tbody class="tabla-opiniones">
           <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
@@ -190,6 +191,53 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </tbody>
       </table>
 
+
+    </div>
+    <div class="col-12">
+      <table class="table mb-3 mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Usuario</th>
+            <th scope="col">Tipo de Usuario</th>
+            <th scope="col">Borrar</th>
+            <th scope="col">Hacer admin</th>
+        </thead>
+        <tbody class="tabla-opiniones">
+          <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Usuarios']->value, 'usuario');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
+?>
+          <tr class="btn-centrado">
+            <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['nombre'];?>
+</td>
+            <td>
+              <?php if ($_smarty_tpl->tpl_vars['usuario']->value['admin'] == 1) {?>
+              Admin
+              <?php } else { ?>
+              Usuario
+              <?php }?>
+            </td>
+            <td>
+            <?php if ($_smarty_tpl->tpl_vars['usuario']->value['id_usuario'] != $_smarty_tpl->tpl_vars['UserId']->value) {?>
+              <a type="button" class="btn btn-enviar" href="borrarUsuario/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+" target="_self">Borrar Usuario</a>
+            </td>
+            <?php }?>
+            <td>
+              <?php if ($_smarty_tpl->tpl_vars['usuario']->value['admin'] == 1) {?>
+              <?php } else { ?>
+              <a type="button" class="btn btn-enviar " href="darPermiso/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+" target="_self">Dar Permiso</a>
+              <?php }?>
+            </td>
+          </tr>
+          <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        </tbody>
+      </table>
     </div>
   </article>
 </div>

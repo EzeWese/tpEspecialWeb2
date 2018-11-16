@@ -3,11 +3,13 @@
 require_once  "php/view/ProductosView.php";
 require_once  "php/model/ProductosModel.php";
 require_once  "SecuredController.php";
+require_once  "php/model/UsuarioModel.php";
 
 class ProductosController extends SecuredController
 {
   private $view;
   private $model;
+  private $modelUsuario;
 
   function __construct()
   {
@@ -15,13 +17,15 @@ class ProductosController extends SecuredController
 
     $this->view = new ProductosView();
     $this->model = new ProductosModel();
+    $this->modelUsuario = new UsuarioModel();
   }
 
   function ProductosAdmin(){
 
     $Productos = $this->model->getProductos();
     $Categorias = $this->model->getCategorias();
-    $this->view->MostrarProductosAdmin($Productos,$Categorias);
+    $Usuarios = $this->modelUsuario->getUsuarios();
+    $this->view->MostrarProductosAdmin($Productos,$Categorias,$Usuarios);
   }
 
   function ProductosUsuario(){
@@ -29,6 +33,14 @@ class ProductosController extends SecuredController
     $Productos = $this->model->getProductos();
     $Categorias = $this->model->getCategorias();
     $this->view->MostrarProductosUsuario($Productos,$Categorias);
+  }
+
+  function borrarUsuario($idUsuario){
+    if (isset($idUsuario)) {
+      $this->model->borrarComentariosUsuario($idUsuario[0]);
+      $this->modelUsuario->borrarUser($idUsuario[0]);
+      header(ADMIN);
+    }
   }
 
   function InsertProducto(){
@@ -45,38 +57,57 @@ class ProductosController extends SecuredController
   }
 
   function BorrarProducto($param){
-    $this->model->BorrarProducto($param[0]);
-    header(ADMIN);
+    if (isset($param)) {
+      $this->model->BorrarProducto($param[0]);
+      header(ADMIN);
+    }
+  }
+
+  function hacerAdmin($idUsuario){
+    if (isset($idUsuario)) {
+      $this->model->hacerAdmin($idUsuario[0]);
+      header(ADMIN);
+    }
   }
 
   function EditarProducto($param){
-    $IdProducto = $param[0];
-    $Categorias = $this->model->getCategorias();
-    $Producto = $this->model->getProducto($IdProducto);
-    $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
-    $this->view->MostrarEditarProducto($Producto,$Categorias,$Imagenes);
+    if (isset($param)) {
 
+      $IdProducto = $param[0];
+      $Categorias = $this->model->getCategorias();
+      $Producto = $this->model->getProducto($IdProducto);
+      $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
+      $this->view->MostrarEditarProducto($Producto,$Categorias,$Imagenes);
+    }
   }
 
   function mostrarDetalleUser($param){
-    $IdProducto = $param[0];
-    $Producto = $this->model->getProducto($IdProducto);
-    $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
-    $this->view->mostrarDetalleUser($Producto, $Imagenes);
-  }
+    if (isset($param)) {
+
+
+      $IdProducto = $param[0];
+      $Producto = $this->model->getProducto($IdProducto);
+      $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
+      $this->view->mostrarDetalleUser($Producto, $Imagenes);
+      }
+    }
 
   function EditarCategoria($param){
-    $IdCategoria = $param[0];
-    $Categoria = $this->model->getCategoria($IdCategoria);
-    $this->view->MostrarEditarCategoria($Categoria[0]);
+    if (isset($param)) {
 
-
+      $IdCategoria = $param[0];
+      $Categoria = $this->model->getCategoria($IdCategoria);
+      $this->view->MostrarEditarCategoria($Categoria[0]);
+    }
   }
+
   function BorrarCategoria($param){
-    $this->model->BorrarCategoria($param[0]);
-    header(ADMIN);
-  }
+    if (isset($param)) {
 
+      $this->model->BorrarCategoria($param[0]);
+      header(ADMIN);
+    }
+  }
 
   function GuardarEditarProducto(){
     $nombre = $_POST["nombreProducto"];
@@ -90,6 +121,7 @@ class ProductosController extends SecuredController
     $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto,$rutaTempImagenes);
     header(ADMIN);
   }
+
   function GuardarEditarCategoria(){
     $nombre = $_POST["nombreCategoria"];
     $descripcion = $_POST["descripcion"];

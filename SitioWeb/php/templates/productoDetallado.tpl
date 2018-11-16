@@ -29,7 +29,7 @@
       </div>
       <div class="row justify-content-center mt-4">
         <div class="galeriaporelmundo col-8 mb-4">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
 
             <div class="carousel-inner ">
               <div class="carousel-item active imgporelmundo">

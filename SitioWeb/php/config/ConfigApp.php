@@ -36,7 +36,9 @@ class ConfigApp
       'filtrarPorCategoria'=> 'PageController#filtrarPorCategoria',
       'user'=> 'ProductosController#ProductosUsuario',
       'detalleUser'=> 'ProductosController#mostrarDetalleUser',
-      'borrarImagen'=> 'ProductosController#borrarImagen'
+      'borrarImagen'=> 'ProductosController#borrarImagen',
+      'borrarUsuario'=> 'ProductosController#borrarUsuario',
+      'darPermiso'=> 'ProductosController#hacerAdmin'
 
     ];
 

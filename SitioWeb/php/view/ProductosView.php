@@ -8,12 +8,14 @@
       $this->Smarty = new Smarty();
     }
 
-    function MostrarProductosAdmin($Productos,$Categorias) {
+    function MostrarProductosAdmin($Productos,$Categorias,$Usuarios) {
       $this->Smarty->assign('home','http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
       //$this->Smarty->assign('Titulo',$Titulo); // El 'Titulo' del assign puede ser cualquier valor
       $this->Smarty->assign('Productos',$Productos);
       $this->Smarty->assign('Categorias',$Categorias);
       $this->Smarty->assign('User',$_SESSION["User"]);
+      $this->Smarty->assign('UserId',$_SESSION["UserId"]);
+      $this->Smarty->assign('Usuarios',$Usuarios);
       //$smarty->debugging = true;
       $this->Smarty->display('php/templates/productosAdmin.tpl');
     }
