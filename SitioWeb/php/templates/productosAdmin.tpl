@@ -142,6 +142,7 @@
             <th scope="col">Tipo de Usuario</th>
             <th scope="col">Borrar</th>
             <th scope="col">Hacer admin</th>
+          </tr>
         </thead>
         <tbody class="tabla-opiniones">
           {foreach from=$Usuarios item=usuario}
@@ -161,7 +162,7 @@
             {/if}
             <td>
               {if $usuario['admin'] eq 1}
-              Ya es admin
+              
               {else}
               <a type="button" class="btn btn-enviar " href="darPermiso/{$usuario['id_usuario']}" target="_self">Dar Permiso</a>
               {/if}

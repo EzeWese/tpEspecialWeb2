@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 19:47:31
+/* Smarty version 3.1.33, created on 2018-11-22 03:28:17
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productoDetalladoUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bef10c369a6a1_51847356',
+  'unifunc' => 'content_5bf61441298cf4_68667867',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd514079b38d0ccac5d6458892b4dec7bcdd81123' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetalladoUsuario.tpl',
-      1 => 1542393798,
+      1 => 1542853666,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bef10c369a6a1_51847356 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf61441298cf4_68667867 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center margenPagina">
@@ -91,33 +91,43 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
         </div>
       </div>
+    </div>
 
-
-
-
-      <h3>Comentarios</h3>
+      <div class="informaciongeneral encuesta row mt-3 mb-3">
+        <div class="ml-4">
+          <h2>Comentarios</h2>
+        </div>
+        <div class="puntajeMargen">
+          <h2>Puntaje</h2>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+        </div>
+      </div>
 
       <div id="comentarios-container" class="mt-3">
 
       </div>
       <div class="mt-3">
-    <h3>Nuevo Comentario</h3>
-    <div class="informaciongeneral encuesta mt-3 mb-3">
-      <form method="" action="" target="_self">
-        <div class="form-group">
-          <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+        <h3>Nuevo Comentario</h3>
+        <div class="informaciongeneral encuesta mt-3 mb-3">
+          <form method="" action="" target="_self">
+            <div class="form-group">
+              <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="puntaje">Puntaje</label>
+              <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
+            </div>
+          </form>
+          <div class="botonesForm mt-3">
+            <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="puntaje">Puntaje</label>
-          <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
-        </div>
-      </form>
-      <div class="botonesForm mt-3">
-        <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
       </div>
-      </div>
-
-  </div>
       <div class="informaciongeneral encuesta mt-3 mb-3">
         <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
 /user" target="_self">
@@ -130,7 +140,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
-    </div>
+
   </article>
 </div>
 <footer class="container-fluid">

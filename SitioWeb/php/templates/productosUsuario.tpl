@@ -30,6 +30,7 @@
                 <form class="row" action="filtrarPorCategoria" method="post" target="_self">
                   <div class="col">
                     <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
+                      <option value=""></option>
                       {foreach from=$Categorias item=categoria}
                       <option value="{$categoria['id_categoria']}">{$categoria['nombre']}</option>
                       {/foreach}

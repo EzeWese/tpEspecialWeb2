@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 17:44:27
+/* Smarty version 3.1.33, created on 2018-11-20 19:52:58
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productosAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beef3ebc68914_91537359',
+  'unifunc' => 'content_5bf4580a592e08_10807338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '377b8cbceb33ffae1000c18f20107250f0220dae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosAdmin.tpl',
-      1 => 1542386663,
+      1 => 1542739974,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5beef3ebc68914_91537359 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf4580a592e08_10807338 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center margenPagina">
@@ -201,6 +201,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <th scope="col">Tipo de Usuario</th>
             <th scope="col">Borrar</th>
             <th scope="col">Hacer admin</th>
+          </tr>
         </thead>
         <tbody class="tabla-opiniones">
           <?php
@@ -226,7 +227,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
             <?php }?>
             <td>
               <?php if ($_smarty_tpl->tpl_vars['usuario']->value['admin'] == 1) {?>
-              Ya es admin
+              
               <?php } else { ?>
               <a type="button" class="btn btn-enviar " href="darPermiso/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 " target="_self">Dar Permiso</a>

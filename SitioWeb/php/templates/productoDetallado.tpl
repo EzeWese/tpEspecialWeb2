@@ -29,7 +29,7 @@
       </div>
       <div class="row justify-content-center mt-4">
         <div class="galeriaporelmundo col-8 mb-4">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner ">
               <div class="carousel-item active imgporelmundo">
@@ -52,8 +52,23 @@
           </div>
         </div>
       </div>
+    </div>
+    
+      <div class="informaciongeneral encuesta row mt-3 mb-3">
+        <div class="ml-4">
+          <h2>Comentarios</h2>
+        </div>
+        <div class="puntajeMargen">
+          <h2>Puntaje</h2>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+        </div>
+      </div>
 
-      <h3>Comentarios</h3>
 
       <div id="comentarios-container" class="mt-3">
 
@@ -66,7 +81,7 @@
         </form>
       </div>
 
-    </div>
+
   </article>
 </div>
 </div>

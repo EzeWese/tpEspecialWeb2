@@ -68,42 +68,59 @@
         </div>
       </div>
       <div class="mb-3 imagenProducto">
-          {foreach from=$Imagenes item=imagen}
-          <form class="" action="{$home}/borrarImagen" method="post" target="_self">
-            <div class="input-group">
-              <input type="text" value="{$imagen['id_imagen']}" name="IdImagen" id="IdImagen" hidden>
-              <input type="text" value="{$imagen['id_producto']}" name="IdImagenProducto" id="IdImagenProducto" hidden>
-              <input type="text" class="form-control" placeholder="{$imagen['url']}" aria-label="{$imagen['url']}" aria-describedby="basic-addon2" disabled>
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit">Borrar</button>
-              </div>
+        {foreach from=$Imagenes item=imagen}
+        <form class="" action="{$home}/borrarImagen" method="post" target="_self">
+          <div class="input-group">
+            <input type="text" value="{$imagen['id_imagen']}" name="IdImagen" id="IdImagen" hidden>
+            <input type="text" value="{$imagen['id_producto']}" name="IdImagenProducto" id="IdImagenProducto" hidden>
+            <input type="text" class="form-control" placeholder="{$imagen['url']}" aria-label="{$imagen['url']}" aria-describedby="basic-addon2" disabled>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit">Borrar</button>
             </div>
-          </form>
-          {/foreach}
+          </div>
+        </form>
+        {/foreach}
       </div>
     </div>
-    <h3>Comentarios</h3>
+
+    <div class="informaciongeneral encuesta row mt-3 mb-3">
+      <div class="ml-4">
+        <h2>Comentarios</h2>
+      </div>
+      <div class="puntajeMargen">
+        <h2>Puntaje</h2>
+      </div>
+      <div class="botonesForm ml-2">
+        <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+      </div>
+      <div class="botonesForm ml-2">
+        <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+      </div>
+    </div>
+
     <div id="comentarios-container" class="mt-3 mb-3">
 
     </div>
+
     <div class="mt-3">
-    <h3>Nuevo Comentario</h3>
-    <div class="informaciongeneral encuesta mt-3 mb-3">
-      <form method="" action="" target="_self">
-        <div class="form-group">
-          <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+      <h3>Nuevo Comentario</h3>
+      <div class="informaciongeneral encuesta mt-3 mb-3">
+        <form method="" action="" target="_self">
+          <div class="form-group">
+            <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="puntaje">Puntaje</label>
+            <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
+          </div>
+        </form>
+        <div class="botonesForm mt-3">
+          <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
         </div>
-        <div class="form-group">
-          <label for="puntaje">Puntaje</label>
-          <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
-        </div>
-      </form>
-      <div class="botonesForm mt-3">
-        <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
-      </div>
       </div>
 
-  </div>
+    </div>
+
     <div class="informaciongeneral encuesta mt-3 mb-3">
       <form method="post" action="{$home}/admin" target="_self">
         <div class="botonesForm mt-3 ">
@@ -111,6 +128,7 @@
         </div>
       </form>
     </div>
+
   </article>
 </div>
 

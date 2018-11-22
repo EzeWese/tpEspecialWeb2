@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 17:41:29
+/* Smarty version 3.1.33, created on 2018-11-22 03:30:23
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productoDetallado.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beef339094d25_74020275',
+  'unifunc' => 'content_5bf614bfdc6824_92817223',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4d070f4f2ef51b2f3b5471e0df6dbd0fca2716c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetallado.tpl',
-      1 => 1542386248,
+      1 => 1542853801,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5beef339094d25_74020275 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf614bfdc6824_92817223 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center margenPagina">
@@ -60,7 +60,7 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
       </div>
       <div class="row justify-content-center mt-4">
         <div class="galeriaporelmundo col-8 mb-4">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner ">
               <div class="carousel-item active imgporelmundo">
@@ -91,8 +91,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
         </div>
       </div>
+    </div>
+    
+      <div class="informaciongeneral encuesta row mt-3 mb-3">
+        <div class="ml-4">
+          <h2>Comentarios</h2>
+        </div>
+        <div class="puntajeMargen">
+          <h2>Puntaje</h2>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+        </div>
+      </div>
 
-      <h3>Comentarios</h3>
 
       <div id="comentarios-container" class="mt-3">
 
@@ -106,7 +121,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </form>
       </div>
 
-    </div>
+
   </article>
 </div>
 </div>

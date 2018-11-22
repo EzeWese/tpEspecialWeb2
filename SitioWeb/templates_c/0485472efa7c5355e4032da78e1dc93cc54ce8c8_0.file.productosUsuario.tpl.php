@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-16 05:59:12
+/* Smarty version 3.1.33, created on 2018-11-22 03:08:48
   from 'C:\xampp\htdocs\Proyects\Web2\tpEspecialWeb2\SitioWeb\php\templates\productosUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bee4ea0e264d8_84144509',
+  'unifunc' => 'content_5bf60fb07d51e0_75100895',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0485472efa7c5355e4032da78e1dc93cc54ce8c8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\Web2\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productosUsuario.tpl',
-      1 => 1542344337,
+      1 => 1542739497,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bee4ea0e264d8_84144509 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf60fb07d51e0_75100895 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
@@ -57,6 +57,7 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
                 <form class="row" action="filtrarPorCategoria" method="post" target="_self">
                   <div class="col">
                     <select class="form-control respuestas" id="categoria" placeholder="" name="IdCategoria">
+                      <option value=""></option>
                       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Categorias']->value, 'categoria');
 if ($_from !== null) {

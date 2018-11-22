@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2018 a las 07:42:36
+-- Tiempo de generación: 22-11-2018 a las 15:23:46
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -73,7 +73,14 @@ INSERT INTO `comentario` (`id_comentario`, `id_producto`, `id_usuario`, `nombre`
 (2, 20, 1, 'pepe', 'me arrepenti, ojo no lo compres', 3),
 (3, 20, 1, 'pepe', 'termo piolaso', 5),
 (4, 18, 3, 'pepo', 'excelente termo!', 5),
-(5, 18, 3, 'pepo', 'si haganme caso', 5);
+(5, 18, 3, 'pepo', 'si haganme caso', 5),
+(12, 23, 1, 'pepe', '', 0),
+(15, 23, 1, 'pepe', '', 0),
+(20, 23, 6, '3', '', 0),
+(21, 23, 1, 'pepe', '', 0),
+(22, 20, 6, '3', 'excelente!', 4),
+(27, 20, 6, '3', 'esaaa', 1),
+(29, 20, 1, 'pepe', 'Me encanto!', 2);
 
 -- --------------------------------------------------------
 
@@ -95,7 +102,6 @@ INSERT INTO `imagen` (`id_imagen`, `id_producto`, `url`) VALUES
 (25, 13, 'images/5bee6107cbbd5.jpg'),
 (26, 14, 'images/5bee617f6c448.jpg'),
 (27, 22, 'images/5bee61e29ca59.jpg'),
-(28, 22, 'images/5bee61e29f518.jpg'),
 (29, 21, 'images/5bee61efd53b9.jpg'),
 (30, 17, 'images/5bee62032186f.jpg'),
 (31, 18, 'images/5bee6225a2d81.jpg'),
@@ -157,7 +163,9 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `admin`, `nombre`, `pass`) VALUES
 (1, 1, 'pepe', '$2y$10$si8oRTDUH5OhitHUNjmMi.TkFmnaQ5fJGITzoFqNyIeLwkiQVA.wG'),
-(3, 0, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S');
+(3, 1, 'pepo', '$2y$10$sROsY1Dxj4O/EbbYDHX9XOVeWHCDlFHbfAJZhhU0hrLBREmszIZ8S'),
+(6, 0, '3', '$2y$10$BLnBYuo21S98fDDrjQYzWe3n1gfzcrfKKFH3390VWupWX0OFBlSSO'),
+(8, 0, 'usercomun', '$2y$10$3WaI3rgwAqjJbAUT1rv7QeDbSUGx3sVzK/4jU1irQ9b.7wMrD3zaC');
 
 --
 -- Índices para tablas volcadas
@@ -211,7 +219,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `imagen`
@@ -229,7 +237,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas

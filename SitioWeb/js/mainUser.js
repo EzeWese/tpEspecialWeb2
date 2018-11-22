@@ -1,19 +1,29 @@
 'use strict'
 let templateComentarios;
+let idProducto = document.querySelector("#IdProducto").value;
+let orden = document.querySelector('.btn-Ascendente').value;
 
-document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario());
+document.querySelector('.btn-Descendente').addEventListener('click', function(){ orden = this.value; });
+document.querySelector('.btn-Descendente').addEventListener('click', e => getComentarios(idProducto, orden));
+
+document.querySelector('.btn-Ascendente').addEventListener('click', function(){ orden = this.value; });
+document.querySelector('.btn-Ascendente').addEventListener('click', e => getComentarios(idProducto, orden));
+
+document.querySelector('.btn-enviarComentario').addEventListener('click', e => enviarComentario(orden));
+
 fetch('js/templates/comentarios.handlebars')
   .then(response => response.text())
   .then(template => {
     templateComentarios = Handlebars.compile(template); // compila y prepara el template
-    let idProducto = document.querySelector("#IdProducto").value;
-    getComentarios(idProducto);
-    timer = setInterval(function () { getComentarios(idProducto); }, 2000);
+    getComentarios(idProducto, orden);
   });
 
-function getComentarios(idProducto) {
+let timer = setInterval(function () { getComentarios(idProducto, orden); }, 2000);
+
+function getComentarios(idProducto, orden) {
   fetch("api/comentario/"+idProducto)
     .then(response => response.json())
+    .then(jsonComentarios => sortJSON(jsonComentarios, 'puntaje', orden))
     .then(jsonComentarios => {
       mostrarComentarios(jsonComentarios);
     })
@@ -28,7 +38,7 @@ function mostrarComentarios(jsonComentarios) {
   document.querySelector("#comentarios-container").innerHTML = html;
 }
 
-function enviarComentario() {
+function enviarComentario(orden) {
   let idProd = document.querySelector("#IdProducto").value;
       let comentario = document.querySelectorAll('.comentario');
       let encuesta = {
@@ -44,6 +54,21 @@ function enviarComentario() {
           },
           body: JSON.stringify(encuesta)
       }).then(response =>
-          getComentarios(idProd)
+          getComentarios(idProd, orden)
       );
+}
+
+function sortJSON(data, key, orden) {
+    return data.sort(function (a, b) {
+        var x = a[key],
+        y = b[key];
+
+        if (orden === 'asc') {
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        }
+
+        if (orden === 'desc') {
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }
+    });
 }
