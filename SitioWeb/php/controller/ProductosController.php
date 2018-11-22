@@ -129,9 +129,7 @@ class ProductosController extends SecuredController
     $IdCategoria = $_POST["IdCategoria"];
     $precio = $_POST["precio"];
     $IdProducto = $_POST["IdProducto"];
-
     $rutaTempImagenes = $_FILES['imagenes']['tmp_name'];
-
     $this->model->EditarProducto($IdCategoria,$nombre,$precio,$descripcion,$IdProducto,$rutaTempImagenes);
     header(ADMIN);
   }

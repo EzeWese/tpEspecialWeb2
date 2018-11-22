@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-22 15:33:10
+/* Smarty version 3.1.33, created on 2018-11-22 18:11:29
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bf6be26484ac7_98965622',
+  'unifunc' => 'content_5bf6e3411486c5_86968758',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca7af308c0ab4b4220f4a8ed47fbf779b62f1bc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productos.tpl',
-      1 => 1542897166,
+      1 => 1542906674,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5bf6be26484ac7_98965622 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6e3411486c5_86968758 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="row justify-content-center">
   <article class="principal col-12 col-md-10">
     <div class="informaciongeneral encuesta row mt-3 mb-3">
       <div class="ml-4">
-        <h2>Usuario</h2>
+      
       </div>
       <div class="">
         <form method="post" action="login" target="_self">

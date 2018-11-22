@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 22:36:22
+/* Smarty version 3.1.33, created on 2018-11-22 18:14:59
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productoDetalladoUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bec95564ddac2_47030582',
+  'unifunc' => 'content_5bf6e4138b7496_48435033',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f520ffb47672474131a5432138b270eb64c310a6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetalladoUsuario.tpl',
-      1 => 1542231381,
+      1 => 1542897166,
       2 => 'file',
     ),
   ),
@@ -21,10 +21,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bec95564ddac2_47030582 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6e4138b7496_48435033 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="row justify-content-center">
+<div class="row justify-content-center margenPagina">
   <article class="principal col-12 col-md-10">
     <div class="justify-content-center informaciongeneral mt-3">
       <h2>Producto</h2>
@@ -71,10 +71,10 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->value) {
 ?>
-                <div class="carousel-item  imgporelmundo">
-                  <img class="d-block w-100" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+              <div class="carousel-item  imgporelmundo">
+                <img class="d-block w-100" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
 " alt="">
-                </div>
+              </div>
               <?php
 }
 }
@@ -91,28 +91,56 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </div>
         </div>
       </div>
-
-
-
-
-        <h3>Comentarios</h3>
-
-        <div id="comentarios-container" class="mt-3">
-
-        </div>
-        <div class="informaciongeneral encuesta mt-3 mb-3">
-          <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
-/admin" target="_self">
-            <div class="botonesForm mt-3 ">
-            <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
-              </div>
-          </form>
-        </div>
-
-
-
-
     </div>
+
+      <div class="informaciongeneral encuesta row mt-3 mb-3">
+        <div class="ml-4">
+          <h2>Comentarios</h2>
+        </div>
+        <div class="puntajeMargen">
+          <h2>Puntaje</h2>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+        </div>
+      </div>
+
+      <div id="comentarios-container" class="mt-3">
+
+      </div>
+      <div class="mt-3">
+        <h3>Nuevo Comentario</h3>
+        <div class="informaciongeneral encuesta mt-3 mb-3">
+          <form method="" action="" target="_self">
+            <div class="form-group">
+              <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="puntaje">Puntaje</label>
+              <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
+            </div>
+          </form>
+          <div class="botonesForm mt-3">
+            <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
+          </div>
+        </div>
+      </div>
+      <div class="informaciongeneral encuesta mt-3 mb-3">
+        <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/user" target="_self">
+          <div class="botonesForm mt-3 ">
+            <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
   </article>
 </div>
 <footer class="container-fluid">

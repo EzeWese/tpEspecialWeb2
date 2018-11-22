@@ -14,11 +14,7 @@
         </form>
       </div>
       <div class="">
-        <form method="post" action="register" target="_self">
-          <div class="botonesForm ml-3">
-            <button type="submit" class="btn btn-lg btn-enviar">Registrar Nuevo Usuario</button>
-          </div>
-        </form>
+        
       </div>
     </div>
     <div class="justify-content-center informaciongeneral mt-3">
@@ -162,7 +158,7 @@
             {/if}
             <td>
               {if $usuario['admin'] eq 1}
-              
+
               {else}
               <a type="button" class="btn btn-enviar " href="darPermiso/{$usuario['id_usuario']}" target="_self">Dar Permiso</a>
               {/if}

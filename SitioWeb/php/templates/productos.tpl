@@ -3,7 +3,7 @@
   <article class="principal col-12 col-md-10">
     <div class="informaciongeneral encuesta row mt-3 mb-3">
       <div class="ml-4">
-        <h2>Usuario</h2>
+      
       </div>
       <div class="">
         <form method="post" action="login" target="_self">
