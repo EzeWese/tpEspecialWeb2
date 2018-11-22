@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 23:33:53
+/* Smarty version 3.1.33, created on 2018-11-22 15:49:49
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\editarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5beca2d14cda31_82101745',
+  'unifunc' => 'content_5bf6c20d392f42_49783783',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8666231227ab2b03ceb5229494276fcf30702cb3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\editarProducto.tpl',
-      1 => 1542234831,
+      1 => 1542897166,
       2 => 'file',
     ),
   ),
@@ -21,12 +21,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5beca2d14cda31_82101745 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6c20d392f42_49783783 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="row justify-content-center">
+<div class="row justify-content-center margenPagina">
   <article class="principal col-12 col-md-10">
-    <div class="justify-content-center informaciongeneral mt-3">
+    <div class="justify-content-center informaciongeneral mt-3 mb-3">
       <h2>Editar Producto</h2>
     </div>
     <div class="justify-content-center informaciongeneral encuesta">
@@ -83,40 +83,114 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <div class="justify-content-center informaciongeneral mt-3 mb-3">
         <h3>Imágenes</h3>
       </div>
-      <div class="mb-3">
+      <div class="row justify-content-center mt-4">
+        <div class="galeriaporelmundo col-8 mb-4">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-          <?php
+            <div class="carousel-inner ">
+              <div class="carousel-item active imgporelmundo">
+                <img class="d-block w-100" src="imagenes/mate.png" alt="FOTOS DEL PRODUCTO">
+              </div>
+              <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Imagenes']->value, 'imagen');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->value) {
 ?>
-          <form method="POST" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
-/borrarImagen"  target="_self">
-          <input type="text" name="id_imagen" value="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_imagen'];?>
-" hidden><?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
-
-
-          <button type="submit">Borrar</button>
-          </form>
-          <?php
+              <div class="carousel-item  imgporelmundo">
+                <img class="d-block w-100" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+" alt="">
+              </div>
+              <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 imagenProducto">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Imagenes']->value, 'imagen');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->value) {
+?>
+        <form class="" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/borrarImagen" method="post" target="_self">
+          <div class="input-group">
+            <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_imagen'];?>
+" name="IdImagen" id="IdImagen" hidden>
+            <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['id_producto'];?>
+" name="IdImagenProducto" id="IdImagenProducto" hidden>
+            <input type="text" class="form-control" placeholder="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+" aria-label="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+" aria-describedby="basic-addon2" disabled>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit">Borrar</button>
+            </div>
+          </div>
+        </form>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </div>
     </div>
-    <h3>Comentarios</h3>
+
+    <div class="informaciongeneral encuesta row mt-3 mb-3">
+      <div class="ml-4">
+        <h2>Comentarios</h2>
+      </div>
+      <div class="puntajeMargen">
+        <h2>Puntaje</h2>
+      </div>
+      <div class="botonesForm ml-2">
+        <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+      </div>
+      <div class="botonesForm ml-2">
+        <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+      </div>
+    </div>
+
     <div id="comentarios-container" class="mt-3 mb-3">
 
     </div>
+
+    <div class="mt-3">
+      <h3>Nuevo Comentario</h3>
+      <div class="informaciongeneral encuesta mt-3 mb-3">
+        <form method="" action="" target="_self">
+          <div class="form-group">
+            <textarea name="comentario" class="form-control comentario" id="comentario" placeholder="Nuevo Comentario" name="comentario" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="puntaje">Puntaje</label>
+            <input type="number" min="1" max="5" class="form-control comentario" id="puntaje" value="" placeholder="Puntaje" name="puntaje" required>
+          </div>
+        </form>
+        <div class="botonesForm mt-3">
+          <button type="submit" class="btn btn-lg btn-enviarComentario">Comentar</button>
+        </div>
+      </div>
+
+    </div>
+
     <div class="informaciongeneral encuesta mt-3 mb-3">
       <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
 /admin" target="_self">
         <div class="botonesForm mt-3 ">
-        <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
-          </div>
+          <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+        </div>
       </form>
     </div>
+
   </article>
 </div>
 

@@ -4,6 +4,8 @@ require_once  "php/view/ProductosView.php";
 require_once  "php/model/ProductosModel.php";
 require_once  "SecuredController.php";
 require_once  "php/model/UsuarioModel.php";
+require_once  "SecuredController.php";
+
 
 class ProductosController extends SecuredController
 {
@@ -22,10 +24,16 @@ class ProductosController extends SecuredController
 
   function ProductosAdmin(){
 
-    $Productos = $this->model->getProductos();
-    $Categorias = $this->model->getCategorias();
-    $Usuarios = $this->modelUsuario->getUsuarios();
-    $this->view->MostrarProductosAdmin($Productos,$Categorias,$Usuarios);
+    if ($_SESSION["admin"]==1) {
+      $Productos = $this->model->getProductos();
+      $Categorias = $this->model->getCategorias();
+      $Usuarios = $this->modelUsuario->getUsuarios();
+      $this->view->MostrarProductosAdmin($Productos,$Categorias,$Usuarios);
+    }
+    else {
+      header(USUARIO);
+    }
+
   }
 
   function ProductosUsuario(){
@@ -71,8 +79,8 @@ class ProductosController extends SecuredController
   }
 
   function EditarProducto($param){
+    if ($_SESSION["admin"]==1) {
     if (isset($param)) {
-
       $IdProducto = $param[0];
       $Categorias = $this->model->getCategorias();
       $Producto = $this->model->getProducto($IdProducto);
@@ -80,11 +88,13 @@ class ProductosController extends SecuredController
       $this->view->MostrarEditarProducto($Producto,$Categorias,$Imagenes);
     }
   }
+  else {
+    header(USUARIO);
+  }
+  }
 
   function mostrarDetalleUser($param){
     if (isset($param)) {
-
-
       $IdProducto = $param[0];
       $Producto = $this->model->getProducto($IdProducto);
       $Imagenes = $this->model->getImagenesPorProducto($IdProducto);
@@ -93,12 +103,16 @@ class ProductosController extends SecuredController
     }
 
   function EditarCategoria($param){
+    if ($_SESSION["admin"]==1) {
     if (isset($param)) {
-
       $IdCategoria = $param[0];
       $Categoria = $this->model->getCategoria($IdCategoria);
-      $this->view->MostrarEditarCategoria($Categoria[0]);
+      $this->view->MostrarEditarCategoria($Categoria);
     }
+  }
+  else {
+    header(USUARIO);
+  }
   }
 
   function BorrarCategoria($param){

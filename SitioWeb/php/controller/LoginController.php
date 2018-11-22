@@ -40,12 +40,14 @@ class LoginController
                   session_start();
                   $_SESSION["User"] = $usuario;
                   $_SESSION["UserId"] = $dbUser[0]["id_usuario"];
+                  $_SESSION["admin"] =$dbUser[0]["admin"];
                   header(ADMIN);
               }
               else{
                 session_start();
                 $_SESSION["User"] = $usuario;
                 $_SESSION["UserId"] = $dbUser[0]["id_usuario"];
+                $_SESSION["admin"] =$dbUser[0]["admin"];
                 header(USUARIO);
               }
         }

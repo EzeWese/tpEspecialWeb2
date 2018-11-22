@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-14 22:43:43
+/* Smarty version 3.1.33, created on 2018-11-22 15:33:16
   from 'C:\xampp\htdocs\Proyects\tpEspecialWeb2\SitioWeb\php\templates\productoDetallado.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bec970fa062f8_20149454',
+  'unifunc' => 'content_5bf6be2c009f76_76035151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3c2bd69fbb5041fa714c2fc74d1d5dded016188a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyects\\tpEspecialWeb2\\SitioWeb\\php\\templates\\productoDetallado.tpl',
-      1 => 1542231815,
+      1 => 1542897166,
       2 => 'file',
     ),
   ),
@@ -21,10 +21,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:php/templates/header.tpl' => 1,
   ),
 ),false)) {
-function content_5bec970fa062f8_20149454 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bf6be2c009f76_76035151 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="row justify-content-center">
+<div class="row justify-content-center margenPagina">
   <article class="principal col-12 col-md-10">
     <div class="justify-content-center informaciongeneral mt-3">
       <h2>Producto</h2>
@@ -54,55 +54,74 @@ $_smarty_tpl->_subTemplateRender("file:php/templates/header.tpl", $_smarty_tpl->
           <input type="text" class="form-control respuestas" id="precioP" value="<?php echo $_smarty_tpl->tpl_vars['Producto']->value['precio'];?>
 " placeholder="" name="precio" disabled>
         </div>
-        <div class="justify-content-center informaciongeneral mt-3 mb-3">
-          <h3>Imágenes</h3>
-        </div>
-        <div class="row justify-content-center mt-4">
-          <div class="galeriaporelmundo col-8 mb-4">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      </form>
+      <div class="justify-content-center informaciongeneral mt-3 mb-3">
+        <h3>Imágenes</h3>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="galeriaporelmundo col-8 mb-4">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-              <div class="carousel-inner ">
-                <div class="carousel-item active imgporelmundo">
-                  <img class="d-block w-100" src="imagenes/mate.png" alt="FOTOS DEL PRODUCTO">
-                </div>
-                <?php
+            <div class="carousel-inner ">
+              <div class="carousel-item active imgporelmundo">
+                <img class="d-block w-100" src="imagenes/mate.png" alt="FOTOS DEL PRODUCTO">
+              </div>
+              <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['Imagenes']->value, 'imagen');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->value) {
 ?>
-                  <div class="carousel-item  imgporelmundo">
-                    <img class="d-block w-100" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
+              <div class="carousel-item  imgporelmundo">
+                <img class="d-block w-100" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['url'];?>
 " alt="">
-                  </div>
-                <?php
+              </div>
+              <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
-
-        <h3>Comentarios</h3>
-        <div id="comentarios-container" class="mt-3">
-
-        </div>
-
-
-
-        <div class="botonesForm mt-3 mb-3">
-          <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
-        </div>
-      </form>
+      </div>
     </div>
+    
+      <div class="informaciongeneral encuesta row mt-3 mb-3">
+        <div class="ml-4">
+          <h2>Comentarios</h2>
+        </div>
+        <div class="puntajeMargen">
+          <h2>Puntaje</h2>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="asc" type="submit" class="btn btn-lg btn-Ascendente">Ascendente</button>
+        </div>
+        <div class="botonesForm ml-2">
+          <button value="desc" type="submit" class="btn btn-lg btn-Descendente">Descendente</button>
+        </div>
+      </div>
+
+
+      <div id="comentarios-container" class="mt-3">
+
+      </div>
+      <div class="informaciongeneral encuesta mt-3 mb-3">
+        <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['home']->value;?>
+/productos" target="_self">
+          <div class="botonesForm mt-3 ">
+            <button type="submit" class="btn btn-lg btn-enviar">Volver</button>
+          </div>
+        </form>
+      </div>
+
+
   </article>
 </div>
 </div>
